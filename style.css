@@ -226,21 +226,10 @@ a  { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('images/hero.jpg');
+  background-image: url('https://picsum.photos/seed/istanbul/1920/1080');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 0;
-}
-/* Fallback gradient if photo not loaded */
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 15% 60%, rgba(0,40,80,.55) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 50% at 85% 30%, rgba(45,155,110,.12) 0%, transparent 60%),
-    linear-gradient(160deg, #040d1a 0%, #070d18 40%, #060f10 70%, #0a0f0b 100%);
   z-index: 0;
 }
 
