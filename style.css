@@ -226,7 +226,7 @@ a  { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://loremflickr.com/1920/1080/istanbul,bosphorus,night/all');
+  background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
