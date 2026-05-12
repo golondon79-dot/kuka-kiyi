@@ -1,128 +1,100 @@
-/* KuKa Kıyı Marina — script.js */
+/* KuKa Kıyı Marina */
 
-/* ── Language system ──────────────────────────────────── */
-const translations = {
-  tr: { dir: 'ltr', lang: 'tr' },
-  en: { dir: 'ltr', lang: 'en' },
-  ar: { dir: 'rtl', lang: 'ar' }
-};
-
+/* ── Language ────────────────────────────────────────────── */
+const LANGS = { tr:{dir:'ltr'}, en:{dir:'ltr'}, ar:{dir:'rtl'} };
 let currentLang = 'tr';
 
 function applyLang(lang) {
-  if (!translations[lang]) return;
+  if (!LANGS[lang]) return;
   currentLang = lang;
-
-  const { dir } = translations[lang];
   document.documentElement.setAttribute('lang', lang);
-  document.documentElement.setAttribute('dir', dir);
-
+  document.documentElement.setAttribute('dir', LANGS[lang].dir);
   document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-    const val = el.getAttribute('data-' + lang);
-    if (!val) return;
-    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      el.placeholder = val;
-    } else {
-      el.innerHTML = val;
-    }
+    const v = el.getAttribute('data-' + lang);
+    if (!v) return;
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = v;
+    else el.innerHTML = v;
   });
-
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-
+  document.querySelectorAll('.lang-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.lang === lang));
   localStorage.setItem('kuka-lang', lang);
 }
 
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-});
+document.querySelectorAll('.lang-btn').forEach(b =>
+  b.addEventListener('click', () => applyLang(b.dataset.lang)));
 
-/* Restore saved language */
-const savedLang = localStorage.getItem('kuka-lang');
-if (savedLang && translations[savedLang]) applyLang(savedLang);
+const saved = localStorage.getItem('kuka-lang');
+if (saved && LANGS[saved]) applyLang(saved);
 
 
-/* ── Navbar scroll ────────────────────────────────────── */
-const navbar = document.getElementById('navbar');
+/* ── Navbar scroll ───────────────────────────────────────── */
+const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
+  nav.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
 
-/* ── Mobile menu ──────────────────────────────────────── */
-const hamburger   = document.getElementById('hamburger');
-const mobileMenu  = document.getElementById('mobileMenu');
+/* ── Hero load animation ─────────────────────────────────── */
+const hero = document.querySelector('.hero');
+if (hero) requestAnimationFrame(() => hero.classList.add('loaded'));
 
-hamburger.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
+window.addEventListener('scroll', () => {
+  const bg = document.getElementById('heroBg');
+  if (bg) bg.style.transform = `scale(1.05) translateY(${window.scrollY * 0.2}px)`;
+}, { passive: true });
+
+
+/* ── Mobile burger ───────────────────────────────────────── */
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+burger.addEventListener('click', () => {
+  const open = drawer.classList.toggle('open');
+  burger.classList.toggle('open', open);
 });
-
-mobileMenu.querySelectorAll('a').forEach(a => {
+drawer.querySelectorAll('a').forEach(a =>
   a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('open');
-  });
-});
+    drawer.classList.remove('open');
+    burger.classList.remove('open');
+  }));
 
 
-/* ── Menu tabs ────────────────────────────────────────── */
+/* ── Menu tabs ───────────────────────────────────────────── */
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => {
     const target = tab.dataset.tab;
-
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-
     tab.classList.add('active');
     const panel = document.getElementById('tab-' + target);
     if (panel) {
       panel.classList.add('active');
       panel.style.opacity = '0';
-      requestAnimationFrame(() => {
-        panel.style.transition = 'opacity .25s ease';
-        panel.style.opacity = '1';
-      });
+      requestAnimationFrame(() => { panel.style.transition = 'opacity .3s'; panel.style.opacity = '1'; });
     }
   });
 });
 
 
-/* ── Smooth scroll for anchor links ──────────────────── */
+/* ── Smooth anchor scroll ────────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
-    const target = document.getElementById(id);
-    if (!target) return;
+    const el = document.getElementById(id);
+    if (!el) return;
     e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: 'smooth' });
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
   });
 });
 
 
-/* ── Intersection observer — fade-in on scroll ────────── */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+/* ── Scroll fade-in ──────────────────────────────────────── */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.08 });
 
-document.querySelectorAll(
-  '.event-card, .menu-item, .shisha-card, .info-card, .wa-card, .stat'
-).forEach(el => {
+document.querySelectorAll('.sc-item,.ev-card,.mi,.ss-item,.ci-row').forEach(el => {
   el.classList.add('fade-up');
-  observer.observe(el);
+  obs.observe(el);
 });
-
-/* Add fade-up CSS dynamically so it doesn't need a separate block in CSS */
-const style = document.createElement('style');
-style.textContent = `
-  .fade-up { opacity: 0; transform: translateY(22px); transition: opacity .5s ease, transform .5s ease; }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-`;
-document.head.appendChild(style);
