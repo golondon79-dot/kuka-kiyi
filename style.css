@@ -226,7 +226,7 @@ a  { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1920&h=1080&fit=crop&q=85');
+  background-image: url('https://loremflickr.com/1920/1080/istanbul,bosphorus,night/all');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
