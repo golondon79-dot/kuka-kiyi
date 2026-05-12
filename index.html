@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KuKa Kıyı Marina — Büyükçekmece'nin en güzel deniz manzarasında premium nargile, PS5 oyun odası, maç yayınları ve özel etkinlikler.">
+  <title>KuKa Kıyı Marina | Büyükçekmece</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <!-- To use your logo file: replace the two spans below with:
+             <img src="images/logo.png" alt="KuKa Logo" class="logo-img"> -->
+        <span class="logo-script">KuKa</span>
+        <span class="logo-sub">KIYI MARİNA</span>
+      </a>
+
+      <div class="nav-center">
+        <a href="#menu"    class="nav-link" data-tr="Menü"       data-en="Menu"    data-ar="القائمة">Menü</a>
+        <a href="#events"  class="nav-link" data-tr="Etkinlikler" data-en="Events"  data-ar="الفعاليات">Etkinlikler</a>
+        <a href="#contact" class="nav-link" data-tr="İletişim"   data-en="Contact" data-ar="اتصل بنا">İletişim</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="tr">TR</button>
+          <button class="lang-btn"        data-lang="en">EN</button>
+          <button class="lang-btn"        data-lang="ar">AR</button>
+        </div>
+        <a href="https://wa.me/905385044555" class="btn-nav-wa" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-tr="Rezervasyon" data-en="Reserve" data-ar="احجز">Rezervasyon</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#menu"    data-tr="Menü"       data-en="Menu"    data-ar="القائمة">Menü</a>
+      <a href="#events"  data-tr="Etkinlikler" data-en="Events"  data-ar="الفعاليات">Etkinlikler</a>
+      <a href="#contact" data-tr="İletişim"   data-en="Contact" data-ar="اتصل بنا">İletişim</a>
+      <a href="https://wa.me/905385044555" class="mobile-wa" target="_blank" rel="noopener">
+        <span data-tr="WhatsApp Rezervasyon" data-en="WhatsApp Reservation" data-ar="حجز واتساب">WhatsApp Rezervasyon</span>
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-script">KuKa</div>
+        <div class="hero-logo-location">KIYI MARİNA · BÜYÜKÇEKMECEf</div>
+      </div>
+
+      <h1 class="hero-tagline"
+        data-tr="Deniz Kenarında<br>Premium Nargile & Eğlence"
+        data-en="Premium Shisha & Entertainment<br>on the Waterfront"
+        data-ar="شيشة بريميوم وترفيه<br>على الواجهة البحرية">
+        Deniz Kenarında<br>Premium Nargile & Eğlence
+      </h1>
+
+      <p class="hero-sub"
+        data-tr="Her gün 08:00 – 02:00 &nbsp;·&nbsp; Kıyı Marina, Büyükçekmece"
+        data-en="Open daily 08:00 – 02:00 &nbsp;·&nbsp; Kıyı Marina, Büyükçekmece"
+        data-ar="مفتوح يومياً 08:00 – 02:00 &nbsp;·&nbsp; مارينا كيي، بيوك تشكمجة">
+        Her gün 08:00 – 02:00 &nbsp;·&nbsp; Kıyı Marina, Büyükçekmece
+      </p>
+
+      <div class="hero-badges">
+        <span class="badge" data-tr="🌊 Deniz Manzarası" data-en="🌊 Sea View"         data-ar="🌊 إطلالة بحرية">🌊 Deniz Manzarası</span>
+        <span class="badge" data-tr="💨 Premium Nargile" data-en="💨 Premium Shisha"   data-ar="💨 شيشة بريميوم">💨 Premium Nargile</span>
+        <span class="badge" data-tr="🎮 PS5 & Oyun"     data-en="🎮 PS5 & Gaming"     data-ar="🎮 PS5 وألعاب">🎮 PS5 & Oyun</span>
+        <span class="badge" data-tr="⚽ Maç Yayınları"  data-en="⚽ Live Matches"      data-ar="⚽ مباريات مباشرة">⚽ Maç Yayınları</span>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="https://wa.me/905385044555" class="btn-primary" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-tr="WhatsApp ile Rezervasyon" data-en="Reserve via WhatsApp" data-ar="احجز عبر واتساب">WhatsApp ile Rezervasyon</span>
+        </a>
+        <a href="#menu" class="btn-ghost">
+          <span data-tr="Menüyü Keşfet" data-en="Explore Menu" data-ar="استكشف القائمة">Menüyü Keşfet</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ STATS BAR ═══════════════════════ -->
+  <div class="stats-bar">
+    <div class="container stats-inner">
+      <div class="stat">
+        <span class="stat-val">4.5 ★</span>
+        <span class="stat-lbl" data-tr="Google Puanı" data-en="Google Rating" data-ar="تقييم جوجل">Google Puanı</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-val">80+</span>
+        <span class="stat-lbl" data-tr="Kişilik Teras" data-en="Terrace Seats" data-ar="مقاعد التراس">Kişilik Teras</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-val">08–02</span>
+        <span class="stat-lbl" data-tr="Her Gün Açık" data-en="Open Daily" data-ar="مفتوح يومياً">Her Gün Açık</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-val">4</span>
+        <span class="stat-lbl" data-tr="KuKa Şubesi" data-en="KuKa Branches" data-ar="فروع كوكا">KuKa Şubesi</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════ MENU ═══════════════════════ -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-tr="Lezzetlerimiz" data-en="Our Flavours" data-ar="أطباقنا">Lezzetlerimiz</span>
+        <h2 data-tr="Menü" data-en="Menu" data-ar="القائمة">Menü</h2>
+        <p data-tr="Kıyı Marina şubesine özel güncel menümüz" data-en="Our current menu exclusive to the Kıyı Marina branch" data-ar="قائمتنا الحالية الخاصة بفرع مارينا كيي">Kıyı Marina şubesine özel güncel menümüz</p>
+      </div>
+
+      <div class="menu-tabs" role="tablist">
+        <button class="tab active" data-tab="breakfast" role="tab"
+          data-tr="☕ Kahvaltı" data-en="☕ Breakfast" data-ar="☕ إفطار">☕ Kahvaltı</button>
+        <button class="tab" data-tab="mains" role="tab"
+          data-tr="🍽 Ana Yemekler" data-en="🍽 Main Dishes" data-ar="🍽 أطباق رئيسية">🍽 Ana Yemekler</button>
+        <button class="tab" data-tab="shisha" role="tab"
+          data-tr="💨 Nargile" data-en="💨 Shisha" data-ar="💨 شيشة">💨 Nargile</button>
+        <button class="tab" data-tab="drinks" role="tab"
+          data-tr="🥤 İçecekler" data-en="🥤 Drinks" data-ar="🥤 مشروبات">🥤 İçecekler</button>
+      </div>
+
+      <!-- Breakfast -->
+      <div class="tab-panel active" id="tab-breakfast">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Serpme Kahvaltı" data-en="Traditional Spread" data-ar="إفطار مفرود">Serpme Kahvaltı</h4>
+              <p data-tr="Peynir çeşitleri, zeytin, bal, kaymak, domates, salatalık ve daha fazlası" data-en="Cheese varieties, olives, honey, clotted cream, tomato, cucumber and more" data-ar="أجبان متنوعة، زيتون، عسل، قشطة، طماطم، خيار والمزيد">Peynir çeşitleri, zeytin, bal, kaymak ve daha fazlası</p>
+            </div>
+            <span class="mi-dot">●●●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Menemen" data-en="Turkish Scrambled Eggs" data-ar="مينيمين">Menemen</h4>
+              <p data-tr="Domates, biber ve yumurta ile klasik Türk kahvaltısı" data-en="Classic Turkish dish with eggs, tomatoes and peppers" data-ar="طبق تركي كلاسيكي بالبيض والطماطم والفلفل">Domates, biber ve yumurta ile</p>
+            </div>
+            <span class="mi-dot">●●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Avokadolu Tost" data-en="Avocado Toast" data-ar="توست الأفوكادو">Avokadolu Tost</h4>
+              <p data-tr="Ekşi maya ekmeği, taze avokado, limon kabuğu rendesi" data-en="Sourdough bread, fresh avocado, lemon zest" data-ar="خبز العجين المخمر، أفوكادو طازج، قشر الليمون">Ekşi maya, taze avokado, limon</p>
+            </div>
+            <span class="mi-dot">●●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Simit & Peynir Tabağı" data-en="Simit & Cheese Plate" data-ar="طبق سيميت وجبن">Simit & Peynir Tabağı</h4>
+              <p data-tr="Taze simit, beyaz peynir, domates ve salatalık" data-en="Fresh simit, white cheese, tomato and cucumber" data-ar="سيميت طازج، جبن أبيض، طماطم وخيار">Taze simit, beyaz peynir, domates</p>
+            </div>
+            <span class="mi-dot">●</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mains -->
+      <div class="tab-panel" id="tab-mains">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Karışık Izgara" data-en="Mixed Grill Platter" data-ar="مشاوي مشكلة">Karışık Izgara</h4>
+              <p data-tr="Köfte, tavuk şiş ve kuzu şiş, garnitür ve pilav ile" data-en="Meatballs, chicken skewer, lamb skewer with sides and rice" data-ar="كفتة، شيش دجاج وضأن مع مقبلات وأرز">Köfte, tavuk ve kuzu şiş, pilav ile</p>
+            </div>
+            <span class="mi-dot">●●●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Karides Güveç" data-en="Shrimp Casserole" data-ar="يخنة الجمبري">Karides Güveç</h4>
+              <p data-tr="Taze karides, domates sosu, sarımsak, baharatlar ve ekmek" data-en="Fresh shrimp, tomato sauce, garlic, spices with bread" data-ar="جمبري طازج، صلصة طماطم، ثوم وبهارات مع خبز">Taze karides, domates sosu, sarımsak</p>
+            </div>
+            <span class="mi-dot">●●●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Pide Çeşitleri" data-en="Turkish Flatbread" data-ar="أنواع البيدا">Pide Çeşitleri</h4>
+              <p data-tr="Kıymalı, kaşarlı, karışık ve vejeteryan seçenekleri mevcut" data-en="Minced meat, cheese, mixed and vegetarian options available" data-ar="خيارات باللحم المفروم، الجبن، المشكل والنباتي">Kıymalı, kaşarlı, karışık veya vejeteryan</p>
+            </div>
+            <span class="mi-dot">●●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Tavuk Şiş" data-en="Chicken Skewer" data-ar="شيش الدجاج">Tavuk Şiş</h4>
+              <p data-tr="Marine edilmiş tavuk, yanında pilav ve mevsim salatası" data-en="Marinated chicken with rice and seasonal salad" data-ar="دجاج متبل مع أرز وسلطة موسمية">Marine edilmiş tavuk, pilav ve salata</p>
+            </div>
+            <span class="mi-dot">●●</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shisha -->
+      <div class="tab-panel" id="tab-shisha">
+        <p class="shisha-intro" data-tr="Premium kömür ve kaliteli tütün ile hazırlanan nargilelerimiz deniz manzaranızla buluşuyor." data-en="Our shisha prepared with premium coal and quality tobacco — best enjoyed with the sea view." data-ar="شيشتنا محضرة بفحم فاخر وتبغ عالي الجودة — تُستمتع بها مع الإطلالة البحرية.">Premium kömür ve kaliteli tütün ile hazırlanan nargilelerimiz deniz manzaranızla buluşuyor.</p>
+        <div class="shisha-grid">
+          <div class="shisha-card"><span class="si">🍎</span><span data-tr="Elma"           data-en="Apple"       data-ar="تفاح">Elma</span></div>
+          <div class="shisha-card"><span class="si">🍋</span><span data-tr="Nane Limon"     data-en="Mint Lemon"  data-ar="نعناع وليمون">Nane Limon</span></div>
+          <div class="shisha-card"><span class="si">🍓</span><span data-tr="Çilek"          data-en="Strawberry"  data-ar="فراولة">Çilek</span></div>
+          <div class="shisha-card"><span class="si">🍉</span><span data-tr="Karpuz"         data-en="Watermelon"  data-ar="بطيخ">Karpuz</span></div>
+          <div class="shisha-card"><span class="si">🫐</span><span data-tr="Yaban Mersini"  data-en="Blueberry"   data-ar="توت أزرق">Yaban Mersini</span></div>
+          <div class="shisha-card shisha-special">
+            <span class="si">✨</span>
+            <span data-tr="Özel Karışım" data-en="Special Mix" data-ar="مزيج خاص">Özel Karışım</span>
+            <span class="special-tag" data-tr="Özel" data-en="Special" data-ar="مميز">Özel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="tab-panel" id="tab-drinks">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Türk Kahvesi" data-en="Turkish Coffee" data-ar="قهوة تركية">Türk Kahvesi</h4>
+              <p data-tr="Geleneksel hazırlama, sade veya şekerli" data-en="Traditional preparation, plain or sweet" data-ar="تحضير تقليدي، سادة أو بالسكر">Sade veya şekerli</p>
+            </div>
+            <span class="mi-dot">●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Çay" data-en="Tea" data-ar="شاي">Çay</h4>
+              <p data-tr="Demli Türk çayı, bardak veya fincan" data-en="Brewed Turkish tea, glass or cup" data-ar="شاي تركي مقطر، كأس أو فنجان">Demli, bardak veya fincan</p>
+            </div>
+            <span class="mi-dot">●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Taze Limonata" data-en="Fresh Lemonade" data-ar="ليمونادة طازجة">Taze Limonata</h4>
+              <p data-tr="Taze sıkılmış limon, nane, soda" data-en="Freshly squeezed lemon, mint, soda" data-ar="ليمون طازج، نعناع، صودا">Limon, nane, soda</p>
+            </div>
+            <span class="mi-dot">●●</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4 data-tr="Mevsim Smoothie" data-en="Seasonal Smoothie" data-ar="سموثي موسمي">Mevsim Smoothie</h4>
+              <p data-tr="Günün taze mevsim meyvelerine göre hazırlanır" data-en="Prepared from today's fresh seasonal fruits" data-ar="يُحضَّر من الفواكه الموسمية الطازجة اليومية">Günün taze mevsim meyvelerine göre</p>
+            </div>
+            <span class="mi-dot">●●</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-footer">
+        <p class="menu-note"
+          data-tr="● fiyat aralığını gösterir. Güncel fiyatlar ve tam menü için WhatsApp'tan ulaşın veya şubemizi ziyaret edin."
+          data-en="● indicates price range. Contact us via WhatsApp or visit our branch for current prices and full menu."
+          data-ar="● تشير إلى نطاق السعر. تواصل معنا عبر واتساب أو زُر فرعنا للاطلاع على الأسعار الحالية والقائمة الكاملة.">
+          ● fiyat aralığını gösterir. Güncel fiyatlar için WhatsApp'tan ulaşın.
+        </p>
+        <a href="https://wa.me/905385044555?text=Menü%20hakkında%20bilgi%20almak%20istiyorum" class="btn-outline" target="_blank" rel="noopener">
+          <span data-tr="Tam Menü & Fiyatlar" data-en="Full Menu & Prices" data-ar="القائمة الكاملة والأسعار">Tam Menü & Fiyatlar</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ EVENTS ═══════════════════════ -->
+  <section id="events" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-tr="Etkinlikler & Paketler" data-en="Events & Packages" data-ar="الفعاليات والباقات">Etkinlikler & Paketler</span>
+        <h2 data-tr="Deniz Manzaralı Özel Anlar" data-en="Special Moments on the Waterfront" data-ar="لحظات مميزة على الواجهة البحرية">Deniz Manzaralı Özel Anlar</h2>
+        <p data-tr="80 kişilik açık hava terasımızda maç geceleri, DJ etkinlikleri ve özel organizasyonlar" data-en="Match nights, DJ events and private functions on our 80-seat open-air terrace" data-ar="ليالي المباريات وفعاليات الدي جي والمناسبات الخاصة على تراسنا المفتوح بـ 80 مقعداً">80 kişilik açık hava terasımızda etkinlikler ve özel organizasyonlar</p>
+      </div>
+
+      <div class="events-grid">
+
+        <!-- Match Nights -->
+        <div class="event-card">
+          <div class="event-icon-wrap"><span class="event-icon">⚽</span></div>
+          <h3 data-tr="Maç Geceleri" data-en="Match Nights" data-ar="ليالي المباريات">Maç Geceleri</h3>
+          <p data-tr="Şampiyonlar Ligi, Avrupa Ligi ve Süper Lig maçları için deniz manzaralı özel masa paketi. 6–10 kişilik gruplar için 1 hafta öncesinden rezervasyon yapın." data-en="Reserved sea-view table packages for Champions League, Europa League and Süper Lig. Book 1 week ahead for groups of 6–10." data-ar="باقات طاولات مخصصة بإطلالة بحرية لدوري الأبطال والدوري الأوروبي والسوبر ليج. احجز قبل أسبوع لمجموعات 6 إلى 10 أشخاص.">Şampiyonlar Ligi, Avrupa Ligi ve Süper Lig maçları için özel masa paketi.</p>
+          <a href="https://wa.me/905385044555?text=Maç%20gecesi%20masa%20paketi%20hakkında%20bilgi%20almak%20istiyorum" class="event-btn" target="_blank" rel="noopener">
+            <span data-tr="Masa Rezervasyonu" data-en="Book a Table" data-ar="احجز طاولة">Masa Rezervasyonu</span>
+          </a>
+        </div>
+
+        <!-- DJ Nights — featured -->
+        <div class="event-card event-featured">
+          <div class="event-pill" data-tr="Her Hafta" data-en="Every Week" data-ar="كل أسبوع">Her Hafta</div>
+          <div class="event-icon-wrap"><span class="event-icon">🎧</span></div>
+          <h3 data-tr="DJ Geceleri" data-en="DJ Nights" data-ar="ليالي الدي جي">DJ Geceleri</h3>
+          <p data-tr="Cuma ve Cumartesi geceleri canlı DJ. Deniz manzarası, açık hava ve özel masa seçeneği ile İstanbul'un en eşsiz gece deneyimi." data-en="Live DJ every Friday and Saturday. Sea view, open-air setting and reserved tables — Istanbul's most unique night out." data-ar="دي جي حي كل جمعة وسبت. إطلالة بحرية وهواء طلق وطاولات محجوزة — أروع سهرة في إسطنبول.">Cuma ve Cumartesi geceleri canlı DJ. Deniz manzarası ve açık hava terası.</p>
+          <a href="https://wa.me/905385044555?text=DJ%20gecesi%20rezervasyonu%20hakkında%20bilgi%20almak%20istiyorum" class="event-btn" target="_blank" rel="noopener">
+            <span data-tr="Yer Ayırt" data-en="Book Your Spot" data-ar="احجز مكانك">Yer Ayırt</span>
+          </a>
+        </div>
+
+        <!-- Birthday Packages -->
+        <div class="event-card">
+          <div class="event-icon-wrap"><span class="event-icon">🎂</span></div>
+          <h3 data-tr="Doğum Günü Paketleri" data-en="Birthday Packages" data-ar="باقات أعياد الميلاد">Doğum Günü Paketleri</h3>
+          <div class="pkg-list">
+            <div class="pkg-row">
+              <span class="pkg-name" data-tr="🥈 Gümüş" data-en="🥈 Silver" data-ar="🥈 فضي">🥈 Gümüş</span>
+              <span class="pkg-desc" data-tr="Min. harcama + özel alan" data-en="Min. spend + reserved area" data-ar="حد أدنى + منطقة محجوزة">Min. harcama + özel alan</span>
+            </div>
+            <div class="pkg-row">
+              <span class="pkg-name gold" data-tr="🥇 Altın" data-en="🥇 Gold" data-ar="🥇 ذهبي">🥇 Altın</span>
+              <span class="pkg-desc" data-tr="Min. harcama + dekorasyon" data-en="Min. spend + decoration" data-ar="حد أدنى + ديكور">Min. harcama + dekorasyon</span>
+            </div>
+            <div class="pkg-row">
+              <span class="pkg-name plat" data-tr="💎 Platin" data-en="💎 Platinum" data-ar="💎 بلاتيني">💎 Platin</span>
+              <span class="pkg-desc" data-tr="Özel oda + tam organizasyon" data-en="Private room + full setup" data-ar="غرفة خاصة + إعداد كامل">Özel oda + tam organizasyon</span>
+            </div>
+          </div>
+          <a href="https://wa.me/905385044555?text=Doğum%20günü%20paketi%20hakkında%20bilgi%20almak%20istiyorum" class="event-btn" target="_blank" rel="noopener">
+            <span data-tr="Paket Bilgisi Al" data-en="Get Package Info" data-ar="احصل على معلومات الباقة">Paket Bilgisi Al</span>
+          </a>
+        </div>
+
+        <!-- PS5 -->
+        <div class="event-card">
+          <div class="event-icon-wrap"><span class="event-icon">🎮</span></div>
+          <h3 data-tr="PS5 Oyun Odası" data-en="PS5 Game Room" data-ar="غرفة ألعاب PS5">PS5 Oyun Odası</h3>
+          <p data-tr="Saatlik kiralama ile özel PS5 odaları. Gündüz ve akşam seansları. 18–30 yaş gruplar için ideal. Yüksek hızlı internet ile rekabetçi oyun deneyimi." data-en="Private PS5 rooms by the hour. Day and evening sessions. Ideal for groups aged 18–30. High-speed connection for competitive gaming." data-ar="غرف PS5 خاصة بالساعة. جلسات نهارية ومسائية. مثالية للمجموعات 18–30 عاماً. اتصال عالي السرعة للألعاب التنافسية.">Saatlik kiralama ile özel PS5 odaları, gündüz ve akşam seansları.</p>
+          <a href="https://wa.me/905385044555?text=PS5%20odası%20seans%20rezervasyonu%20hakkında%20bilgi%20almak%20istiyorum" class="event-btn" target="_blank" rel="noopener">
+            <span data-tr="Seans Rezervasyonu" data-en="Book a Session" data-ar="احجز جلسة">Seans Rezervasyonu</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-tr="Bize Ulaşın" data-en="Find Us" data-ar="تواصل معنا">Bize Ulaşın</span>
+        <h2 data-tr="İletişim & Rezervasyon" data-en="Contact & Reservation" data-ar="التواصل والحجز">İletişim & Rezervasyon</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-icon">📍</span>
+              <div>
+                <strong data-tr="Adres" data-en="Address" data-ar="العنوان">Adres</strong>
+                <p>Fatih Mah., 2. Kordon Boyu Caddesi No:4<br>Büyükçekmece, İstanbul</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">🕐</span>
+              <div>
+                <strong data-tr="Çalışma Saatleri" data-en="Opening Hours" data-ar="ساعات العمل">Çalışma Saatleri</strong>
+                <p data-tr="Her gün 08:00 – 02:00" data-en="Daily 08:00 – 02:00" data-ar="يومياً 08:00 – 02:00">Her gün 08:00 – 02:00</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">📞</span>
+              <div>
+                <strong data-tr="Telefon" data-en="Phone" data-ar="الهاتف">Telefon</strong>
+                <a href="tel:+905385044555" class="info-link">+90 538 504 45 55</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">💳</span>
+              <div>
+                <strong data-tr="Ödeme" data-en="Payment" data-ar="الدفع">Ödeme</strong>
+                <p data-tr="Nakit & Kredi / Banka Kartı" data-en="Cash & Credit / Debit Card" data-ar="نقداً وبطاقة ائتمان / بطاقة بنكية">Nakit & Kredi / Banka Kartı</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="wa-card">
+            <div class="wa-card-header">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <h3 data-tr="WhatsApp ile Rezervasyon" data-en="Reserve via WhatsApp" data-ar="الحجز عبر واتساب">WhatsApp ile Rezervasyon</h3>
+            </div>
+            <p data-tr="Masa, maç gecesi, doğum günü ve PS5 odası rezervasyonları için bize yazın. En hızlı yanıt yolu." data-en="Message us for table, match night, birthday and PS5 room reservations. The fastest way to reach us." data-ar="راسلنا لحجز الطاولات وليالي المباريات وأعياد الميلاد وغرف PS5. أسرع طريقة للتواصل معنا.">Masa, maç gecesi, doğum günü ve PS5 rezervasyonları için bize yazın.</p>
+            <a href="https://wa.me/905385044555" class="btn-wa-large" target="_blank" rel="noopener">
+              +90 538 504 45 55
+            </a>
+          </div>
+
+          <div class="social-row">
+            <a href="#" class="soc-btn ig" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+            <a href="#" class="soc-btn fb" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=KuKa+Kiyi+Marina+Buyukcukmece+Istanbul&output=embed&z=15"
+            width="100%" height="100%"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="KuKa Kıyı Marina Konum">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-script">KuKa</div>
+        <div class="footer-sub">KIYI MARİNA</div>
+        <p data-tr="Büyükçekmece Kıyı İstanbul Marina" data-en="Büyükçekmece Kıyı İstanbul Marina" data-ar="مارينا كيي بيوك تشكمجة إسطنبول">Büyükçekmece Kıyı İstanbul Marina</p>
+      </div>
+      <div class="footer-links">
+        <a href="#menu"    data-tr="Menü"       data-en="Menu"    data-ar="القائمة">Menü</a>
+        <a href="#events"  data-tr="Etkinlikler" data-en="Events"  data-ar="الفعاليات">Etkinlikler</a>
+        <a href="#contact" data-tr="İletişim"   data-en="Contact" data-ar="اتصل بنا">İletişim</a>
+      </div>
+      <div class="footer-copy">
+        <p data-tr="© 2026 KuKa Kıyı Marina. Tüm hakları saklıdır." data-en="© 2026 KuKa Kıyı Marina. All rights reserved." data-ar="© 2026 KuKa كيي مارينا. جميع الحقوق محفوظة.">© 2026 KuKa Kıyı Marina. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/905385044555" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
