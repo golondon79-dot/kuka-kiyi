@@ -226,7 +226,7 @@ a  { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('images/hero.jpg');
+  background-image: url('images/hero.jpg?v=3');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
