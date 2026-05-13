@@ -2,11 +2,9 @@
 
 /* ── Language ────────────────────────────────────────────── */
 const LANGS = { tr:{dir:'ltr'}, en:{dir:'ltr'}, ar:{dir:'rtl'} };
-let currentLang = 'tr';
 
 function applyLang(lang) {
   if (!LANGS[lang]) return;
-  currentLang = lang;
   document.documentElement.setAttribute('lang', lang);
   document.documentElement.setAttribute('dir', LANGS[lang].dir);
   document.querySelectorAll('[data-' + lang + ']').forEach(el => {
@@ -27,24 +25,7 @@ const saved = localStorage.getItem('kuka-lang');
 if (saved && LANGS[saved]) applyLang(saved);
 
 
-/* ── Navbar scroll ───────────────────────────────────────── */
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
-
-
-/* ── Hero load animation ─────────────────────────────────── */
-const hero = document.querySelector('.hero');
-if (hero) requestAnimationFrame(() => hero.classList.add('loaded'));
-
-window.addEventListener('scroll', () => {
-  const bg = document.getElementById('heroBg');
-  if (bg) bg.style.transform = `scale(1.05) translateY(${window.scrollY * 0.2}px)`;
-}, { passive: true });
-
-
-/* ── Mobile burger ───────────────────────────────────────── */
+/* ── Burger ──────────────────────────────────────────────── */
 const burger = document.getElementById('burger');
 const drawer = document.getElementById('drawer');
 burger.addEventListener('click', () => {
@@ -61,11 +42,11 @@ drawer.querySelectorAll('a').forEach(a =>
 /* ── Menu tabs ───────────────────────────────────────────── */
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    const target = tab.dataset.tab;
+    const id = tab.dataset.tab;
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
-    const panel = document.getElementById('tab-' + target);
+    const panel = document.getElementById('tab-' + id);
     if (panel) {
       panel.classList.add('active');
       panel.style.opacity = '0';
@@ -75,14 +56,14 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 
 
-/* ── Smooth anchor scroll ────────────────────────────────── */
+/* ── Smooth scroll ───────────────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
     const el = document.getElementById(id);
     if (!el) return;
     e.preventDefault();
-    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' });
   });
 });
 
@@ -94,7 +75,7 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.08 });
 
-document.querySelectorAll('.sc-item,.ev-card,.mi,.ss-item,.ci-row').forEach(el => {
-  el.classList.add('fade-up');
+document.querySelectorAll('.ml-item,.ev-card,.sb-item,.ss-h,.stmt-big,.cs-row').forEach(el => {
+  el.classList.add('fade-in');
   obs.observe(el);
 });
