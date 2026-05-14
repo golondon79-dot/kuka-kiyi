@@ -195,6 +195,17 @@ a{text-decoration:none;color:inherit}
 .hours-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--border);font-size:.88rem}
 .hours-row:first-child{border-top:1px solid var(--border)}
 
+/* TESTIMONIALS */
+.reviews{padding:72px 28px;border-top:1px solid var(--border);background:var(--bg2)}
+.reviews-h{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,5vw,2.6rem);font-weight:400;color:var(--dark);margin-bottom:40px}
+.review-cards{display:flex;flex-direction:column;gap:20px}
+.review-card{background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:28px 24px}
+.review-stars{color:#f4a623;font-size:1rem;letter-spacing:2px;margin-bottom:14px}
+.review-text{font-family:'Playfair Display',serif;font-size:.95rem;font-style:italic;line-height:1.75;color:var(--dark);margin-bottom:18px}
+.review-meta{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.review-name{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--dark)}
+.review-source{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
 /* FOOTER */
 .footer{padding:36px 28px;border-top:1px solid var(--border);text-align:center}
 .footer p{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:2.4}
@@ -300,19 +311,19 @@ a{text-decoration:none;color:inherit}
 <div class="gallery-strip">
   <div class="gallery-scroll" id="galleryScroll">
     <div class="gal-item" style="background-image:url('images/photo-exterior.jpg')"></div>
-    <div class="gal-item" style="background-image:url('images/photo-shisha.jpg')"></div>
-    <div class="gal-item" style="background-image:url('images/photo-ps5.jpg');background-position:center 40%"></div>
-    <div class="gal-item" style="background-image:url('images/photo-terrace.jpg');background-position:center center"></div>
-    <div class="gal-item" style="background-image:url('images/gal-steak.jpg');background-position:center center"></div>
-    <div class="gal-item" style="background-image:url('images/gal-dessert.jpg');background-position:center center"></div>
-    <div class="gal-item" style="background-image:url('images/gal-copper.jpg');background-position:center center"></div>
-    <div class="gal-item" style="background-image:url('images/gal-latte.jpg');background-position:center center"></div>
-    <div class="gal-item" style="background-image:url('images/gal-marina.jpg');background-position:center center"></div>
+    <div class="gal-item" data-bg="url('images/photo-shisha.jpg')"></div>
+    <div class="gal-item" style="background-position:center 40%" data-bg="url('images/photo-ps5.jpg')"></div>
+    <div class="gal-item" style="background-position:center center" data-bg="url('images/photo-terrace.jpg')"></div>
+    <div class="gal-item" style="background-position:center center" data-bg="url('images/gal-steak.jpg')"></div>
+    <div class="gal-item" style="background-position:center center" data-bg="url('images/gal-dessert.jpg')"></div>
+    <div class="gal-item" style="background-position:center center" data-bg="url('images/gal-copper.jpg')"></div>
+    <div class="gal-item" style="background-position:center center" data-bg="url('images/gal-latte.jpg')"></div>
+    <div class="gal-item" style="background-position:center center" data-bg="url('images/gal-marina.jpg')"></div>
   </div>
 </div>
 
 <div class="feat-block">
-  <div class="photo-card" style="background-image:url('images/photo-breakfast.jpg');background-position:center bottom"></div>
+  <div class="photo-card" style="background-position:center bottom" data-bg="url('images/photo-breakfast.jpg')"></div>
   <span class="feat-num" data-tr="01 / MUTFAK" data-en="01 / KITCHEN" data-ar="01 / المطبخ">01 / MUTFAK</span>
   <h3 class="sec-h lg" data-tr="Dünya Mutfağı &amp; Türk Kahvaltısı" data-en="World Cuisine &amp; Turkish Breakfast" data-ar="المطبخ العالمي والإفطار التركي">Dünya Mutfağı &amp; Türk Kahvaltısı</h3>
   <p class="sec-body" data-tr="Deniz manzaralı zengin Türk kahvaltısı sabahın erken saatlerinde, ardından İtalyan, Akdeniz ve yerel lezzetler gün boyunca. Her tabak özenle hazırlanır." data-en="Lavish Turkish breakfast with sea views in the morning, then Italian, Mediterranean and local plates all day. Every dish crafted with care." data-ar="إفطار تركي فاخر مع إطلالة بحرية صباحاً، ثم أطباق إيطالية ومتوسطية ومحلية طوال اليوم.">Deniz manzaralı zengin Türk kahvaltısı sabahın erken saatlerinde, ardından İtalyan, Akdeniz ve yerel lezzetler gün boyunca. Her tabak özenle hazırlanır.</p>
@@ -320,7 +331,7 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <div class="feat-block alt">
-  <div class="photo-card" style="background-image:url('images/photo-shisha.jpg');background-position:center center"></div>
+  <div class="photo-card" style="background-position:center center" data-bg="url('images/photo-shisha.jpg')"></div>
   <span class="feat-num" data-tr="02 / ATMOSFER" data-en="02 / ATMOSPHERE" data-ar="02 / الأجواء">02 / ATMOSFER</span>
   <h3 class="sec-h lg" data-tr="Premium Nargile &amp; Lounge" data-en="Premium Shisha &amp; Lounge" data-ar="شيشة بريميوم ولاونج">Premium Nargile &amp; Lounge</h3>
   <p class="sec-body" data-tr="İmza karışımları, uzman nargile ekibi ve marina esintisiyle uzun, sakin bir akşam. KuKa'nın imza deneyimi." data-en="Signature blends, an expert shisha team and the marina breeze for a long, slow evening. KuKa's signature experience." data-ar="مزيجات مميزة وفريق شيشة خبير ونسيم المارينا لأمسية طويلة وهادئة.">İmza karışımları, uzman nargile ekibi ve marina esintisiyle uzun, sakin bir akşam. KuKa'nın imza deneyimi.</p>
@@ -328,7 +339,7 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <div class="feat-block">
-  <div class="photo-card" style="background-image:url('images/photo-ps5.jpg');background-position:center 40%"></div>
+  <div class="photo-card" style="background-position:center 40%" data-bg="url('images/photo-ps5.jpg')"></div>
   <span class="feat-num" data-tr="03 / OYUN ODASI" data-en="03 / GAME ROOM" data-ar="03 / غرفة الألعاب">03 / OYUN ODASI</span>
   <h3 class="sec-h lg" data-tr="PS5 &amp; Oyun Masaları" data-en="PS5 &amp; Game Tables" data-ar="PS5 وطاولات الألعاب">PS5 &amp; Oyun Masaları</h3>
   <p class="sec-body" data-tr="Saatlik kiralama ile özel PS5 odaları ve oyun masaları. Gündüz ve akşam seanslarında rekabetçi oyun deneyimi." data-en="Private PS5 rooms and game tables by the hour. Competitive gaming in day and evening sessions." data-ar="غرف PS5 خاصة وطاولات ألعاب بالساعة. تجربة ألعاب تنافسية في جلسات نهار ومساء.">Saatlik kiralama ile özel PS5 odaları ve oyun masaları. Gündüz ve akşam seanslarında rekabetçi oyun deneyimi.</p>
@@ -340,15 +351,45 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <div class="feat-block alt">
-  <div class="photo-card" style="background-image:url('images/photo-terrace.jpg');background-position:center center"></div>
+  <div class="photo-card" style="background-position:center center" data-bg="url('images/photo-terrace.jpg')"></div>
   <span class="feat-num" data-tr="04 / TERAS" data-en="04 / TERRACE" data-ar="04 / التراس">04 / TERAS</span>
   <h3 class="sec-h lg" data-tr="Açık Hava Terası" data-en="Open Air Terrace" data-ar="تراس مفتوح">Açık Hava Terası</h3>
   <p class="sec-body" data-tr="80 kişilik açık hava terasımızda Cuma ve Cumartesi geceleri canlı DJ, maç yayınları ve özel etkinlikler." data-en="Live DJ every Friday &amp; Saturday, match broadcasts and private events on our 80-seat open-air terrace." data-ar="دي جي حي كل جمعة وسبت، بث المباريات وفعاليات خاصة على تراسنا بـ80 مقعداً.">80 kişilik açık hava terasımızda Cuma ve Cumartesi geceleri canlı DJ, maç yayınları ve özel etkinlikler.</p>
   <a href="https://wa.me/905385044555?text=Etkinlik%20rezervasyonu" class="terra-link" target="_blank" rel="noopener" data-tr="ETKİNLİK REZERVASYONU" data-en="EVENT BOOKING" data-ar="حجز فعالية">ETKİNLİK REZERVASYONU</a>
 </div>
 
+<section class="reviews">
+  <h2 class="reviews-h" data-tr="Misafirlerimiz<br>ne diyor?" data-en="What our guests<br>are saying." data-ar="ماذا يقول<br>ضيوفنا؟">Misafirlerimiz<br>ne diyor?</h2>
+  <div class="review-cards">
+    <div class="review-card fade-in">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-tr="&ldquo;Manzara muhteşem, nargile kalitesi gerçekten üst düzey. Marinalarda bu kadar özel bir mekan bulmak çok zor. Kesinlikle tavsiye ederim.&rdquo;" data-en="&ldquo;The view is stunning and the shisha quality is truly top-tier. It's rare to find such a special place at a marina. Highly recommended.&rdquo;" data-ar="&ldquo;المنظر رائع وجودة الشيشة في أعلى مستوياتها. من النادر إيجاد مكان بهذا التميز في المارينا. أنصح به بشدة.&rdquo;">&ldquo;Manzara muhteşem, nargile kalitesi gerçekten üst düzey. Marinalarda bu kadar özel bir mekan bulmak çok zor. Kesinlikle tavsiye ederim.&rdquo;</p>
+      <div class="review-meta">
+        <span class="review-name">Ahmet K.</span>
+        <span class="review-source">Google</span>
+      </div>
+    </div>
+    <div class="review-card fade-in">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-tr="&ldquo;Kahvaltı inanılmaz zengin ve lezzetli, deniz manzarasıyla birleşince çok özel bir deneyim oluyor. PS5 odası da ayrıca harika, ailecek gelmek için mükemmel.&rdquo;" data-en="&ldquo;The breakfast spread is incredibly rich — combined with the sea view it becomes a truly special experience. The PS5 room is a great bonus for families.&rdquo;" data-ar="&ldquo;الإفطار غني ولذيذ بشكل لا يصدق، مع إطلالة البحر يصبح تجربة خاصة جداً. غرفة PS5 رائعة أيضاً للعائلات.&rdquo;">&ldquo;Kahvaltı inanılmaz zengin ve lezzetli, deniz manzarasıyla birleşince çok özel bir deneyim oluyor. PS5 odası da ayrıca harika, ailecek gelmek için mükemmel.&rdquo;</p>
+      <div class="review-meta">
+        <span class="review-name">Selin Y.</span>
+        <span class="review-source">Google</span>
+      </div>
+    </div>
+    <div class="review-card fade-in">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-tr="&ldquo;Şehrin gürültüsünden uzak, marinada huzurlu bir akşam geçirmek isteyenlere kesinlikle öneririm. Atmosfer ve servis mükemmeldi.&rdquo;" data-en="&ldquo;Perfect escape from the city noise — a peaceful evening by the marina. The atmosphere and service were both excellent.&rdquo;" data-ar="&ldquo;هروب مثالي من ضجيج المدينة — أمسية هادئة بجانب المارينا. الأجواء والخدمة كانتا رائعتين.&rdquo;">&ldquo;Şehrin gürültüsünden uzak, marinada huzurlu bir akşam geçirmek isteyenlere kesinlikle öneririm. Atmosfer ve servis mükemmeldi.&rdquo;</p>
+      <div class="review-meta">
+        <span class="review-name">Mohammed A.</span>
+        <span class="review-source">Google</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="dark-card" id="events" style="margin-top:0">
-  <div class="dc-bg" style="background-image:url('images/photo-aerial-night.jpg')"></div>
+  <div class="dc-bg" data-bg="url('images/photo-aerial-night.jpg')"></div>
   <div class="dc-overlay"></div>
   <div class="dc-content">
     <span class="dc-label" data-tr="MAÇ GECELERİ" data-en="MATCH NIGHTS" data-ar="ليالي المباريات">MAÇ GECELERİ</span>
@@ -422,10 +463,10 @@ a{text-decoration:none;color:inherit}
     <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="terra-link" style="margin-top:0" data-tr="TAKİP ET" data-en="FOLLOW" data-ar="تابعنا">TAKİP ET</a>
   </div>
   <div class="insta-grid">
-    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-image:url('images/insta-coffee.jpg');background-position:center center"></a>
-    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-image:url('images/insta-dessert.jpg');background-position:center center"></a>
-    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-image:url('images/insta-bfast.jpg');background-position:center center"></a>
-    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-image:url('images/photo-terrace.jpg');background-position:center center"></a>
+    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-position:center center" data-bg="url('images/insta-coffee.jpg')"></a>
+    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-position:center center" data-bg="url('images/insta-dessert.jpg')"></a>
+    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-position:center center" data-bg="url('images/insta-bfast.jpg')"></a>
+    <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="insta-sq" style="background-position:center center" data-bg="url('images/photo-terrace.jpg')"></a>
   </div>
 </section>
 
@@ -535,11 +576,20 @@ gs.addEventListener('mouseup',()=>{isDown=false;});
 gs.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-gs.offsetLeft;gs.scrollLeft=scrollLeft-(x-startX)*1.5;});
 
 const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
-},{threshold:0.06});
-document.querySelectorAll('.feat-block,.dc-event,.ml-item,.info-block,.sec-h,.visit-h,.brand-story,.photo-card').forEach(el=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      el.classList.add('visible');
+      const bg=el.dataset.bg;
+      if(bg)el.style.backgroundImage=bg;
+      obs.unobserve(el);
+    }
+  });
+},{threshold:0.04,rootMargin:'100px'});
+document.querySelectorAll('.feat-block,.dc-event,.ml-item,.info-block,.sec-h,.visit-h,.brand-story,.photo-card,.review-card').forEach(el=>{
   el.classList.add('fade-in');obs.observe(el);
 });
+document.querySelectorAll('.gal-item[data-bg],.photo-card[data-bg],.insta-sq[data-bg],.dc-bg[data-bg]').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
