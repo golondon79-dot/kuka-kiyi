@@ -41,15 +41,12 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .ih-scroll{text-align:center;padding:0 0 40px;display:flex;flex-direction:column;align-items:center;gap:10px}
 .ih-scroll span{font-size:.6rem;letter-spacing:.2em;color:var(--gray)}.ih-arrow{font-size:1.2rem;color:var(--green);animation:bounce 2s ease infinite}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-.full-photo{position:relative;height:100vh;overflow:hidden}
-.fp-img{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.03);transition:transform 12s ease}
-.full-photo:hover .fp-img{transform:scale(1)}
-.fp-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.08) 0%,rgba(0,0,0,.04) 40%,rgba(0,0,0,.28) 100%)}
-.fp-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;text-align:center}
-.fp-logo{height:64px;filter:drop-shadow(0 2px 16px rgba(0,0,0,.3));margin:0 auto}
-.fp-bottom{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-end;z-index:2;overflow:hidden}
-.fp-giant{font-family:'Space Grotesk',sans-serif;font-size:clamp(80px,16vw,200px);font-weight:700;text-transform:uppercase;color:rgba(255,255,255,.9);line-height:.9;letter-spacing:-.02em}
-.fp-giant.left{margin-left:-10px}.fp-giant.right{margin-right:-10px;text-align:right}
+.logo-banner{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 40px;background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);gap:32px}
+.lb-logo{height:clamp(80px,18vw,160px);display:block}
+.lb-tagline{font-family:'Space Grotesk',sans-serif;font-size:clamp(.65rem,1.5vw,.85rem);letter-spacing:.28em;text-transform:uppercase;color:var(--gray);text-align:center}
+.lb-dividers{display:flex;align-items:center;gap:20px;width:min(400px,80vw)}
+.lb-line{flex:1;height:1px;background:var(--border)}
+.lb-dot{width:5px;height:5px;border-radius:50%;background:var(--green)}
 .statement{background:var(--white)}.stmt-grid{display:grid;grid-template-columns:45fr 55fr;min-height:80vh}
 .stmt-left{padding:80px 60px 80px 40px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--border)}
 .stmt-big{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;line-height:1.2;margin-bottom:40px}
@@ -174,16 +171,11 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<section class="full-photo">
-  <div class="fp-img" style="background-image:url('images/photo-exterior.jpg')"></div>
-  <div class="fp-overlay"></div>
-  <div class="fp-content">
-    <img src="images/logo-green.png" alt="KuKa" class="fp-logo">
-  </div>
-  <div class="fp-bottom">
-    <span class="fp-giant left" data-tr="KIYIDA" data-en="WATERFRONT" data-ar="على الكورنيش">KIYIDA</span>
-    <span class="fp-giant right" data-tr="PREMIUM" data-en="PREMIUM" data-ar="بريميوم">PREMIUM</span>
-  </div>
+<section class="logo-banner">
+  <div class="lb-dividers"><div class="lb-line"></div><div class="lb-dot"></div><div class="lb-line"></div></div>
+  <img src="images/logo-dark.png" alt="KuKa Kıyı Marina" class="lb-logo">
+  <p class="lb-tagline" data-tr="Büyükçekmece · İstanbul · Marina" data-en="Büyükçekmece · Istanbul · Marina" data-ar="بيوك تشكمجة · إسطنبول · مارينا">Büyükçekmece · İstanbul · Marina</p>
+  <div class="lb-dividers"><div class="lb-line"></div><div class="lb-dot"></div><div class="lb-line"></div></div>
 </section>
 
 <section id="about" class="statement">
@@ -196,7 +188,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
         <span class="plus">+</span>
       </a>
     </div>
-    <div class="stmt-photo" style="background-image:url('images/photo-breakfast.jpg')"></div>
+    <div class="stmt-photo" style="background-image:url('images/photo-breakfast.jpg');background-position:bottom center"></div>
   </div>
 </section>
 
@@ -213,7 +205,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 </div>
 
 <section class="split-section split-reverse">
-  <div class="ss-photo" style="background-image:url('images/photo-shisha.jpg')"></div>
+  <div class="ss-photo" style="background-image:url('images/photo-shisha.jpg');background-position:center 30%"></div>
   <div class="ss-text">
     <span class="ss-num">01</span>
     <h2 class="ss-h" data-tr="PREMİUM NARGİLE" data-en="PREMIUM SHISHA" data-ar="شيشة بريميوم">PREMİUM NARGİLE</h2>
@@ -237,7 +229,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 </section>
 
 <section class="split-section split-reverse">
-  <div class="ss-photo" style="background-image:url('images/photo-interior.jpg')"></div>
+  <div class="ss-photo" style="background-image:url('images/photo-interior.jpg');background-position:center top"></div>
   <div class="ss-text">
     <span class="ss-num">03</span>
     <h2 class="ss-h" data-tr="AÇIK HAVA TERAS" data-en="OPEN AIR TERRACE" data-ar="تراس مفتوح">AÇIK HAVA TERAS</h2>
