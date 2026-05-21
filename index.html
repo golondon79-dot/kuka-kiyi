@@ -225,6 +225,17 @@ a{text-decoration:none;color:inherit}
 .social-icon.insta{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 .social-icon.fb{background:#1877F2;border-radius:6px}
 
+/* STATS BAR */
+.stats-bar{display:flex;justify-content:space-around;align-items:stretch;background:var(--dark);padding:28px 20px}
+.stat-item{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;flex:1;position:relative}
+.stat-item+.stat-item::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,.12)}
+.stat-val{font-family:'Playfair Display',serif;font-size:clamp(1rem,4vw,1.5rem);font-weight:400;color:var(--white);line-height:1}
+.stat-lbl{font-size:.44rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.42);line-height:1.4}
+
+/* WAVE DIVIDERS */
+.wave-sep{display:block;line-height:0;overflow:hidden;margin-bottom:-2px}
+.wave-sep svg{display:block;width:100%;height:52px}
+
 /* FOOTER */
 .footer{padding:36px 28px;border-top:1px solid var(--border);text-align:center}
 .footer p{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:2.4}
@@ -336,6 +347,24 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-val">2008</span>
+    <span class="stat-lbl">KURULUŞ</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">500m</span>
+    <span class="stat-lbl">SAHİL HATTI</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">4</span>
+    <span class="stat-lbl">ŞUBE</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">Her Gün</span>
+    <span class="stat-lbl">09:00 – 02:00</span>
+  </div>
+</div>
 
 <div class="brand-story">
   <p data-tr="2008'den bu yana İstanbul'un en sosyal kahvesi — şimdi denizde." data-en="Istanbul's most social café since 2008 — now on the water." data-ar="أكثر مقاهي إسطنبول اجتماعية منذ 2008 — الآن على الماء.">Istanbul's most social café since 2008 — now on the water.</p>
@@ -497,7 +526,9 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<section class="occasions">
+<div class="wave-sep"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,52 C360,20 1080,52 1440,20 L1440,52 Z" fill="#1c1410"/></svg></div>
+
+<section class="occasions" style="border-top:none">
   <span class="occ-label" data-tr="ÖZEL ETKİNLİKLER" data-en="SPECIAL OCCASIONS" data-ar="مناسبات خاصة">ÖZEL ETKİNLİKLER</span>
   <h2 class="occ-h" data-tr="Özel anlarınız<br>kıyıda yaşasın." data-en="Make your special<br>moments unforgettable." data-ar="اجعل لحظاتك<br>الخاصة لا تُنسى.">Özel anlarınız<br>kıyıda yaşasın.</h2>
   <p class="occ-body" data-tr="Doğum günleri, kurumsal etkinlikler, romantik akşamlar veya özel grup rezervasyonları için marinada size özel bir deneyim hazırlıyoruz." data-en="Birthdays, corporate events, romantic evenings or private group bookings — we create a tailored experience on the waterfront just for you." data-ar="أعياد الميلاد والفعاليات المؤسسية والسهرات الرومانسية وحجوزات المجموعات — نخلق تجربة مخصصة على الواجهة البحرية.">Doğum günleri, kurumsal etkinlikler, romantik akşamlar veya özel grup rezervasyonları için marinada size özel bir deneyim hazırlıyoruz.</p>
@@ -513,7 +544,9 @@ a{text-decoration:none;color:inherit}
   </a>
 </section>
 
-<section class="insta-strip">
+<div class="wave-sep" style="background:#1c1410"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C360,32 1080,0 1440,32 L1440,0 Z" fill="#f5ede0"/></svg></div>
+
+<section class="insta-strip" style="border-top:none">
   <div class="insta-header">
     <span class="insta-title">@kukakiyimarina</span>
     <a href="https://www.instagram.com/kurucesmekahvesi_kiyimarina/" target="_blank" rel="noopener" class="terra-link" style="margin-top:0" data-tr="TAKİP ET" data-en="FOLLOW" data-ar="تابعنا">TAKİP ET</a>
@@ -667,7 +700,7 @@ document.body.insertAdjacentHTML('beforeend','<button id="back-top" aria-label="
 document.body.insertAdjacentHTML('beforeend',`<div id="lb" role="dialog" aria-modal="true"><img id="lb-img" src="" alt=""><button id="lb-close" aria-label="Kapat">&#x2715;</button><button class="lb-arrow" id="lb-prev" aria-label="Önceki">&#8249;</button><button class="lb-arrow" id="lb-next" aria-label="Sonraki">&#8250;</button></div>`);
 (function(){
   const lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img');
-  const items=[...document.querySelectorAll('.gal-item')];
+  const items=[...document.querySelectorAll('.gal-item,.photo-card')];
   let cur=0,touchX=0;
   function srcOf(el){
     const bg=el.style.backgroundImage||el.dataset.bg||'';
