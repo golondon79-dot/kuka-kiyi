@@ -257,6 +257,10 @@ a{text-decoration:none;color:inherit}
   .brand-story,.statement-block{padding-left:20px;padding-right:20px}
 }
 [dir="rtl"] .ml-item{flex-direction:row-reverse}
+#back-top{position:fixed;bottom:88px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--terra);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:900}
+#back-top.show{opacity:1;pointer-events:auto}
+#back-top:hover{background:var(--terra-dk);transform:translateY(-2px)}
+@media(max-width:640px){#back-top{bottom:80px}}
   </style>
 </head>
 <body>
@@ -647,6 +651,10 @@ document.querySelectorAll('.feat-block,.dc-event,.ml-item,.info-block,.sec-h,.vi
   el.classList.add('fade-in');obs.observe(el);
 });
 document.querySelectorAll('.gal-item[data-bg],.photo-card[data-bg],.insta-sq[data-bg],.dc-bg[data-bg]').forEach(el=>obs.observe(el));
+document.body.insertAdjacentHTML('beforeend','<button id="back-top" aria-label="Yukarı çık"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M4 9l5-5 5 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>');
+const backTop=document.getElementById('back-top');
+window.addEventListener('scroll',()=>{backTop.classList.toggle('show',window.scrollY>400)},{passive:true});
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
