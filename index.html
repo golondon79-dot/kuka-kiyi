@@ -68,8 +68,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);line-
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 
+/* PROGRESS BAR */
+#progress-bar{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--terra);z-index:1000;transition:width .1s linear;pointer-events:none}
+
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 20px;height:var(--nav-h);gap:12px}
+.nav{position:fixed;top:2px;left:0;right:0;z-index:200;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 20px;height:var(--nav-h);gap:12px;transition:box-shadow .3s,background .3s}
+.nav.scrolled{box-shadow:0 4px 24px rgba(28,20,16,.10);background:rgba(245,237,224,.97);border-bottom-color:transparent}
 .nav-logo-box{border:1.5px solid var(--dark);padding:6px 10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .nav-logo-box img{height:44px}
 .nav-brand{font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;line-height:1.5;color:var(--dark);flex:1;font-weight:500}
@@ -694,6 +698,15 @@ document.querySelectorAll('.feat-block,.dc-event,.ml-item,.info-block,.sec-h,.vi
   el.classList.add('fade-in');obs.observe(el);
 });
 document.querySelectorAll('.gal-item[data-bg],.photo-card[data-bg],.insta-sq[data-bg],.dc-bg[data-bg]').forEach(el=>obs.observe(el));
+document.body.insertAdjacentHTML('afterbegin','<div id="progress-bar"></div>');
+const progressBar=document.getElementById('progress-bar');
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop||document.body.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+  progressBar.style.width=pct+'%';
+  navEl.classList.toggle('scrolled',(h.scrollTop||document.body.scrollTop)>40);
+},{passive:true});
 document.body.insertAdjacentHTML('beforeend','<button id="back-top" aria-label="Yukarı çık"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M4 9l5-5 5 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>');
 
 // Lightbox
