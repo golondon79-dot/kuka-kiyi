@@ -64,7 +64,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{--bg:#f5ede0;--bg2:#f0e8d5;--dark:#1c1410;--terra:#b85c38;--terra-dk:#96482c;--muted:#7a6857;--border:#ddd0bc;--white:#ffffff;--nav-h:72px}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);line-height:1.5;overflow-x:hidden;padding-bottom:64px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);line-height:1.5;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 
@@ -106,7 +106,8 @@ a{text-decoration:none;color:inherit}
 .hero-content{padding:36px 28px 52px;display:flex;flex-direction:column;gap:20px;background:var(--bg)}
 .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,10vw,5.5rem);font-weight:400;line-height:1.06;color:var(--dark)}
 .hero-h1 em{font-style:italic;color:var(--terra);font-weight:400}
-.hero-label{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+.hero-label{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);display:inline-flex;align-items:center;gap:12px}
+.hero-label::before{content:'';width:28px;height:1px;background:var(--terra);flex-shrink:0}
 .hero-body{font-size:.86rem;color:var(--dark);line-height:1.78;max-width:440px;opacity:.85}
 .hero-ctas{display:flex;flex-direction:column;gap:14px;align-items:flex-start;margin-top:6px}
 .text-link{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--dark);border-bottom:1.5px solid var(--dark);padding-bottom:2px;display:inline-block}
@@ -276,6 +277,7 @@ a{text-decoration:none;color:inherit}
   .burger{display:flex}
   .float-wa{display:none}
   .wa-bar{display:flex}
+  body{padding-bottom:64px}
   .dark-card{margin:0 10px 0;border-radius:22px}
   .section,.feat-block,.menu-section,.visit-section{padding-left:20px;padding-right:20px}
   .hero-content{padding-left:20px;padding-right:20px}
@@ -283,6 +285,13 @@ a{text-decoration:none;color:inherit}
   .gal-item{flex:0 0 180px;height:240px}
   .insta-grid{grid-template-columns:repeat(2,1fr)}
   .brand-story,.statement-block{padding-left:20px;padding-right:20px}
+}
+/* WIDE SCREEN MAX-WIDTH */
+@media(min-width:1100px){
+  .hero-content,.brand-story,.section,.feat-block,.statement-block,.dc-content,.menu-section,.occasions,.visit-section,.reviews,.footer,.insta-header{
+    padding-left:max(60px,calc((100vw - 1200px)/2));
+    padding-right:max(60px,calc((100vw - 1200px)/2));
+  }
 }
 [dir="rtl"] .ml-item{flex-direction:row-reverse}
 /* Lightbox */
@@ -393,6 +402,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <div class="gallery-strip">
+  <div style="padding:36px 28px 0"><span class="sec-label" data-tr="FOTOĞRAFLAR" data-en="PHOTOS" data-ar="الصور">FOTOĞRAFLAR</span></div>
   <div class="gallery-scroll" id="galleryScroll">
     <div class="gal-item" style="background-image:url('images/photo-exterior.jpg')"></div>
     <div class="gal-item" data-bg="url('images/photo-shisha.jpg')"></div>
