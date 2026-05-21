@@ -95,16 +95,17 @@ a{text-decoration:none;color:inherit}
 .dr-wa{color:var(--terra);font-weight:600}
 
 /* HERO */
-.hero{position:relative;min-height:100svh;padding-top:var(--nav-h);overflow:hidden}
+.hero{padding-top:var(--nav-h)}
+.hero-media{position:relative;height:80svh;overflow:hidden}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-.hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(245,237,224,0) 0%,rgba(245,237,224,0) 88%,rgba(245,237,224,.95) 96%,rgba(245,237,224,1) 100%)}
-.hero-content{position:relative;z-index:2;padding:40px 28px 64px;display:flex;flex-direction:column;gap:20px;min-height:calc(100svh - var(--nav-h));justify-content:flex-end}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,10vw,5.5rem);font-weight:400;line-height:1.06;color:var(--white);text-shadow:0 2px 20px rgba(0,0,0,.3)}
-.hero-h1 em{font-style:italic;color:#f2c28a;font-weight:400}
-.hero-label{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:#f2c28a}
-.hero-body{font-size:.86rem;color:rgba(255,255,255,.9);line-height:1.78;max-width:440px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(245,237,224,0) 0%,rgba(245,237,224,0) 88%,rgba(245,237,224,1) 100%)}
+.hero-content{padding:36px 28px 52px;display:flex;flex-direction:column;gap:20px;background:var(--bg)}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,10vw,5.5rem);font-weight:400;line-height:1.06;color:var(--dark)}
+.hero-h1 em{font-style:italic;color:var(--terra);font-weight:400}
+.hero-label{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+.hero-body{font-size:.86rem;color:var(--dark);line-height:1.78;max-width:440px;opacity:.85}
 .hero-ctas{display:flex;flex-direction:column;gap:14px;align-items:flex-start;margin-top:6px}
-.text-link{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--white);border-bottom:1.5px solid rgba(255,255,255,.6);padding-bottom:2px;display:inline-block}
+.text-link{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--dark);border-bottom:1.5px solid var(--dark);padding-bottom:2px;display:inline-block}
 .pill-btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:var(--white);border-radius:40px;padding:14px 28px;font-size:.8rem;font-weight:500;letter-spacing:.04em;transition:background .2s;border:none;cursor:pointer;font-family:'Inter',sans-serif}
 .pill-btn:hover{background:var(--terra-dk)}
 
@@ -298,10 +299,12 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <section class="hero" id="top">
-  <video class="hero-video" autoplay muted loop playsinline poster="images/photo-exterior.jpg">
-    <source src="images/hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-grad"></div>
+  <div class="hero-media">
+    <video class="hero-video" autoplay muted loop playsinline poster="images/photo-exterior.jpg">
+      <source src="images/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-grad"></div>
+  </div>
   <div class="hero-content">
     <span class="hero-label" data-tr="BÜYÜKÇEKMECE · KIYI İSTANBUL MARİNA" data-en="BÜYÜKÇEKMECE · KIYI ISTANBUL MARINA" data-ar="بيوك تشكمجة · مارينا إسطنبول">BÜYÜKÇEKMECE · KIYI İSTANBUL MARİNA</span>
     <h1 class="hero-h1">
@@ -318,6 +321,7 @@ a{text-decoration:none;color:inherit}
     </div>
   </div>
 </section>
+
 
 <div class="brand-story">
   <p data-tr="2008'den bu yana İstanbul'un en sosyal kahvesi — şimdi denizde." data-en="Istanbul's most social café since 2008 — now on the water." data-ar="أكثر مقاهي إسطنبول اجتماعية منذ 2008 — الآن على الماء.">Istanbul's most social café since 2008 — now on the water.</p>
