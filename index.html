@@ -774,7 +774,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   ];
   let cur=0;
   const photo=document.getElementById('igPhoto');
-  const likes=document.getElementById('igLikes');
   const caption=document.getElementById('igCaption');
   function getLang(){return document.documentElement.getAttribute('lang')||'tr';}
   function show(i){
@@ -784,7 +783,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
       photo.style.backgroundImage=posts[i].img;
       photo.style.backgroundSize=posts[i].bgSize||'cover';
       photo.style.backgroundColor=posts[i].bgColor||'transparent';
-      likes.textContent=posts[i].likes;
       caption.innerHTML=posts[i].caption[lang]||posts[i].caption.tr;
       photo.style.opacity=1;
     },220);
