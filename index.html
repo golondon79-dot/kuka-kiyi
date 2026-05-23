@@ -202,7 +202,17 @@ a{text-decoration:none;color:inherit}
 .occ-btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:var(--white);border-radius:40px;padding:16px 32px;font-size:.8rem;font-weight:500;letter-spacing:.04em;transition:background .2s}
 .occ-btn:hover{background:var(--terra-dk)}
 
-/* INSTAGRAM WIDGET */
+/* OCCASIONS DESKTOP */
+@media(min-width:768px){
+  .occasions{display:flex;gap:80px;align-items:center}
+  .occ-left{flex:1}
+  .occ-right{flex:1;border-left:1px solid rgba(255,255,255,.1);padding-left:60px}
+  .occ-tags{display:none}
+}
+.occ-feature{display:flex;align-items:center;gap:20px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.occ-feature:first-child{border-top:1px solid rgba(255,255,255,.08)}
+.occ-feature-num{font-size:.5rem;letter-spacing:.2em;color:var(--terra);font-family:'Inter',sans-serif;flex-shrink:0}
+.occ-feature-name{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;color:rgba(255,255,255,.85);line-height:1.2}
 .ig-section{padding:72px 28px;border-top:1px solid var(--border);text-align:center}
 .ig-big-h{font-family:'Playfair Display',serif;font-size:clamp(2rem,8vw,3.5rem);font-weight:400;font-style:italic;color:var(--dark);margin-bottom:36px}
 .ig-wrap{max-width:420px;margin:0 auto}
@@ -578,25 +588,45 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<div class="wave-sep"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,52 C360,20 1080,52 1440,20 L1440,52 Z" fill="#1c1410"/></svg></div>
+<div class="wave-sep"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,52 C480,0 960,52 1440,0 L1440,52 Z" fill="#1c1410"/></svg></div>
 
 <section class="occasions" style="border-top:none">
-  <span class="occ-label" data-tr="ÖZEL ETKİNLİKLER" data-en="SPECIAL OCCASIONS" data-ar="مناسبات خاصة">ÖZEL ETKİNLİKLER</span>
-  <h2 class="occ-h" data-tr="Özel anlarınız<br>kıyıda yaşasın." data-en="Make your special<br>moments unforgettable." data-ar="اجعل لحظاتك<br>الخاصة لا تُنسى.">Özel anlarınız<br>kıyıda yaşasın.</h2>
-  <p class="occ-body" data-tr="Doğum günleri, kurumsal etkinlikler, romantik akşamlar veya özel grup rezervasyonları için marinada size özel bir deneyim hazırlıyoruz." data-en="Birthdays, corporate events, romantic evenings or private group bookings — we create a tailored experience on the waterfront just for you." data-ar="أعياد الميلاد والفعاليات المؤسسية والسهرات الرومانسية وحجوزات المجموعات — نخلق تجربة مخصصة على الواجهة البحرية.">Doğum günleri, kurumsal etkinlikler, romantik akşamlar veya özel grup rezervasyonları için marinada size özel bir deneyim hazırlıyoruz.</p>
-  <div class="occ-tags">
-    <span class="occ-tag" data-tr="🎂 Doğum Günü" data-en="🎂 Birthday" data-ar="🎂 عيد ميلاد">🎂 Doğum Günü</span>
-    <span class="occ-tag" data-tr="💼 Kurumsal" data-en="💼 Corporate" data-ar="💼 مؤسسي">💼 Kurumsal</span>
-    <span class="occ-tag" data-tr="💍 Evlilik Teklifi" data-en="💍 Proposal" data-ar="💍 خطوبة">💍 Evlilik Teklifi</span>
-    <span class="occ-tag" data-tr="🥂 Özel Grup" data-en="🥂 Private Group" data-ar="🥂 مجموعة خاصة">🥂 Özel Grup</span>
+  <div class="occ-left">
+    <span class="occ-label" data-tr="ÖZEL ETKİNLİKLER" data-en="SPECIAL OCCASIONS" data-ar="مناسبات خاصة">ÖZEL ETKİNLİKLER</span>
+    <h2 class="occ-h" data-tr="Özel anlarınız<br>kıyıda yaşasın." data-en="Make your special<br>moments unforgettable." data-ar="اجعل لحظاتك<br>الخاصة لا تُنسى.">Özel anlarınız<br>kıyıda yaşasın.</h2>
+    <p class="occ-body" data-tr="Doğum günleri, kurumsal etkinlikler, romantik akşamlar veya özel grup rezervasyonları için marinada size özel bir deneyim hazırlıyoruz." data-en="Birthdays, corporate events, romantic evenings or private group bookings — we create a tailored experience on the waterfront just for you." data-ar="أعياد الميلاد والفعاليات المؤسسية والسهرات الرومانسية وحجوزات المجموعات — نخلق تجربة مخصصة على الواجهة البحرية.">Doğum günleri, kurumsal etkinlikler, romantik akşamlar veya özel grup rezervasyonları için marinada size özel bir deneyim hazırlıyoruz.</p>
+    <div class="occ-tags">
+      <span class="occ-tag" data-tr="🎂 Doğum Günü" data-en="🎂 Birthday" data-ar="🎂 عيد ميلاد">🎂 Doğum Günü</span>
+      <span class="occ-tag" data-tr="💼 Kurumsal" data-en="💼 Corporate" data-ar="💼 مؤسسي">💼 Kurumsal</span>
+      <span class="occ-tag" data-tr="💍 Evlilik Teklifi" data-en="💍 Proposal" data-ar="💍 خطوبة">💍 Evlilik Teklifi</span>
+      <span class="occ-tag" data-tr="🥂 Özel Grup" data-en="🥂 Private Group" data-ar="🥂 مجموعة خاصة">🥂 Özel Grup</span>
+    </div>
+    <a href="https://wa.me/905385044555?text=Merhaba%2C%20%C3%B6zel%20bir%20etkinlik%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." class="occ-btn" target="_blank" rel="noopener">
+      <span data-tr="WhatsApp ile Planlayın" data-en="Plan via WhatsApp" data-ar="خطط عبر واتساب">WhatsApp ile Planlayın</span>
+      <span>→</span>
+    </a>
   </div>
-  <a href="https://wa.me/905385044555?text=Merhaba%2C%20%C3%B6zel%20bir%20etkinlik%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." class="occ-btn" target="_blank" rel="noopener">
-    <span data-tr="WhatsApp ile Planlayın" data-en="Plan via WhatsApp" data-ar="خطط عبر واتساب">WhatsApp ile Planlayın</span>
-    <span>→</span>
-  </a>
+  <div class="occ-right">
+    <div class="occ-feature">
+      <span class="occ-feature-num">01</span>
+      <span class="occ-feature-name" data-tr="Doğum Günü" data-en="Birthday" data-ar="عيد الميلاد">Doğum Günü</span>
+    </div>
+    <div class="occ-feature">
+      <span class="occ-feature-num">02</span>
+      <span class="occ-feature-name" data-tr="Kurumsal Etkinlik" data-en="Corporate Event" data-ar="فعالية مؤسسية">Kurumsal Etkinlik</span>
+    </div>
+    <div class="occ-feature">
+      <span class="occ-feature-num">03</span>
+      <span class="occ-feature-name" data-tr="Evlilik Teklifi" data-en="Marriage Proposal" data-ar="خطوبة">Evlilik Teklifi</span>
+    </div>
+    <div class="occ-feature">
+      <span class="occ-feature-num">04</span>
+      <span class="occ-feature-name" data-tr="Özel Grup" data-en="Private Group" data-ar="مجموعة خاصة">Özel Grup</span>
+    </div>
+  </div>
 </section>
 
-<div class="wave-sep" style="background:#1c1410"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C360,32 1080,0 1440,32 L1440,0 Z" fill="#f5ede0"/></svg></div>
+<div class="wave-sep" style="background:#1c1410"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C480,52 960,0 1440,52 L1440,0 Z" fill="#f5ede0"/></svg></div>
 
 <section class="ig-section" style="border-top:none">
   <h2 class="ig-big-h">On Instagram</h2>
