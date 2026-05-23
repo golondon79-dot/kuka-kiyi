@@ -751,27 +751,46 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 // Instagram post slider
 (function(){
   const posts=[
-    {img:"url('images/photo-aerial-night.jpg')",likes:'69 likes',caption:'<strong>kurucesmekahvesi_kiyimarina</strong> Kalabalık sofralar, keyifli anlar ve deniz esintisi… Kıyı Marina\'da hepsi bir arada! 🌊🍷'},
-    {img:"url('images/insta-dessert.jpg')",likes:'1,203 likes',caption:'<strong>kurucesmekahvesi_kiyimarina</strong> Tatlı anlar kıyıda daha güzel. 🍰 Bu hafta sonu bize katılın. #dessert #marina #kuka'},
-    {img:"url('images/insta-bfast.jpg')",likes:'934 likes',caption:'<strong>kurucesmekahvesi_kiyimarina</strong> Sabahın en güzel saatlerini bizimle geçirin. 🌅 Türk kahvaltısı — deniz manzarasıyla. #kahvaltı #kıyı'},
-    {img:"url('images/photo-terrace.jpg')",likes:'1,567 likes',caption:'<strong>kurucesmekahvesi_kiyimarina</strong> Marmara\'nın esintisinde bir akşam. 🌊 Terasımız sizin için açık. #teras #marmara #istanbul'},
+    {img:"url('images/photo-aerial-night.jpg')",likes:'69 likes',caption:{
+      tr:'<strong>kurucesmekahvesi_kiyimarina</strong> Kalabalık sofralar, keyifli anlar ve deniz esintisi… Kıyı Marina\'da hepsi bir arada! 🌊🍷',
+      en:'<strong>kurucesmekahvesi_kiyimarina</strong> Big tables, joyful moments and a sea breeze… All in one place: Kıyı Marina! 🌊🍷',
+      ar:'<strong>kurucesmekahvesi_kiyimarina</strong> موائد كبيرة، لحظات ممتعة ونسيم البحر… كل شيء في مكان واحد: كيي مارينا! 🌊🍷'
+    }},
+    {img:"url('images/insta-dessert.jpg')",likes:'1,203 likes',caption:{
+      tr:'<strong>kurucesmekahvesi_kiyimarina</strong> Tatlı anlar kıyıda daha güzel. 🍰 Bu hafta sonu bize katılın.',
+      en:'<strong>kurucesmekahvesi_kiyimarina</strong> Sweet moments are better by the water. 🍰 Join us this weekend.',
+      ar:'<strong>kurucesmekahvesi_kiyimarina</strong> اللحظات الحلوة أجمل على الشاطئ. 🍰 انضم إلينا هذا الأسبوع.'
+    }},
+    {img:"url('images/insta-bfast.jpg')",likes:'934 likes',caption:{
+      tr:'<strong>kurucesmekahvesi_kiyimarina</strong> Sabahın en güzel saatlerini bizimle geçirin. 🌅 Türk kahvaltısı — deniz manzarasıyla.',
+      en:'<strong>kurucesmekahvesi_kiyimarina</strong> Spend the best morning hours with us. 🌅 Turkish breakfast — with a sea view.',
+      ar:'<strong>kurucesmekahvesi_kiyimarina</strong> اقضِ أجمل ساعات الصباح معنا. 🌅 إفطار تركي — مع إطلالة بحرية.'
+    }},
+    {img:"url('images/photo-terrace.jpg')",likes:'1,567 likes',caption:{
+      tr:'<strong>kurucesmekahvesi_kiyimarina</strong> Marmara\'nın esintisinde bir akşam. 🌊 Terasımız sizin için açık.',
+      en:'<strong>kurucesmekahvesi_kiyimarina</strong> An evening on the Marmara breeze. 🌊 Our terrace is open for you.',
+      ar:'<strong>kurucesmekahvesi_kiyimarina</strong> أمسية على نسيم مرمرة. 🌊 تراسنا مفتوح لكم.'
+    }},
   ];
   let cur=0;
   const photo=document.getElementById('igPhoto');
   const likes=document.getElementById('igLikes');
   const caption=document.getElementById('igCaption');
+  function getLang(){return document.documentElement.getAttribute('lang')||'tr';}
   function show(i){
     photo.style.opacity=0;
     setTimeout(()=>{
+      const lang=getLang();
       photo.style.backgroundImage=posts[i].img;
       likes.textContent=posts[i].likes;
-      caption.innerHTML=posts[i].caption;
+      caption.innerHTML=posts[i].caption[lang]||posts[i].caption.tr;
       photo.style.opacity=1;
     },220);
   }
   show(0);
   document.getElementById('igPrev').addEventListener('click',()=>{cur=(cur-1+posts.length)%posts.length;show(cur);});
   document.getElementById('igNext').addEventListener('click',()=>{cur=(cur+1)%posts.length;show(cur);});
+  document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setTimeout(()=>show(cur),50)));
 })();
 
 const gs=document.getElementById('galleryScroll');
