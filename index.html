@@ -382,10 +382,10 @@ a{text-decoration:none;color:inherit}
 
 <section class="hero" id="top">
   <div class="hero-media">
-    <video class="hero-video" id="hv1" autoplay muted playsinline poster="images/photo-exterior.jpg" style="opacity:1;transition:opacity 1.2s ease">
+    <video class="hero-video" id="hv1" autoplay muted playsinline poster="images/photo-exterior.jpg" style="opacity:1">
       <source src="images/hero.mp4" type="video/mp4">
     </video>
-    <video class="hero-video" id="hv2" muted playsinline style="opacity:0;transition:opacity 1.2s ease">
+    <video class="hero-video" id="hv2" muted playsinline style="opacity:0">
       <source src="images/hero2.mp4" type="video/mp4">
     </video>
     <div class="hero-grad"></div>
@@ -916,13 +916,13 @@ document.body.insertAdjacentHTML('beforeend',`<div id="lb" role="dialog" aria-mo
   const d1=document.getElementById('hd1'),d2=document.getElementById('hd2');
   v2.load();
   v1.addEventListener('ended',()=>{
-    v2.currentTime=0;v2.play();
-    v1.style.opacity=0;v2.style.opacity=1;
+    v1.style.opacity=0;
+    v2.currentTime=0;v2.style.opacity=1;v2.play();
     d1.classList.remove('active');d2.classList.add('active');
   });
   v2.addEventListener('ended',()=>{
-    v1.currentTime=0;v1.play();
-    v2.style.opacity=0;v1.style.opacity=1;
+    v2.style.opacity=0;
+    v1.currentTime=0;v1.style.opacity=1;v1.play();
     d2.classList.remove('active');d1.classList.add('active');
   });
 })();
