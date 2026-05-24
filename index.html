@@ -379,8 +379,11 @@ a{text-decoration:none;color:inherit}
 
 <section class="hero" id="top">
   <div class="hero-media">
-    <video class="hero-video" autoplay muted loop playsinline poster="images/photo-exterior.jpg">
+    <video class="hero-video" id="hv1" autoplay muted loop playsinline poster="images/photo-exterior.jpg" style="opacity:1;transition:opacity 1.2s ease">
       <source src="images/hero.mp4" type="video/mp4">
+    </video>
+    <video class="hero-video" id="hv2" muted loop playsinline style="opacity:0;transition:opacity 1.2s ease">
+      <source src="images/hero2.mp4" type="video/mp4">
     </video>
     <div class="hero-grad"></div>
   </div>
@@ -900,6 +903,18 @@ document.body.insertAdjacentHTML('beforeend',`<div id="lb" role="dialog" aria-mo
     const dx=e.changedTouches[0].clientX-touchX;
     if(Math.abs(dx)>40){dx<0?next():prev();}
   },{passive:true});
+})();
+(function(){
+  const v1=document.getElementById('hv1'),v2=document.getElementById('hv2');
+  let active=1;
+  v2.load();
+  setInterval(()=>{
+    if(active===1){
+      v2.play();v1.style.opacity=0;v2.style.opacity=1;active=2;
+    } else {
+      v1.play();v2.style.opacity=0;v1.style.opacity=1;active=1;
+    }
+  },8000);
 })();
 const backTop=document.getElementById('back-top');
 window.addEventListener('scroll',()=>{backTop.classList.toggle('show',window.scrollY>400)},{passive:true});
