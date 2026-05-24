@@ -218,7 +218,9 @@ a{text-decoration:none;color:inherit}
 .occ-feature-num{font-size:.5rem;letter-spacing:.2em;color:var(--terra);font-family:'Inter',sans-serif;flex-shrink:0}
 .occ-feature-name{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;color:rgba(255,255,255,.85);line-height:1.2}
 .ig-section{padding:72px 28px;border-top:1px solid var(--border);text-align:center}
-.ig-big-h{font-family:'Playfair Display',serif;font-size:clamp(2rem,8vw,3.5rem);font-weight:400;font-style:italic;color:var(--dark);margin-bottom:36px}
+.ig-big-h{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:36px}
+.ig-big-h svg{color:var(--terra)}
+.ig-big-h span{font-family:'Inter',sans-serif;font-size:.75rem;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
 .ig-wrap{max-width:420px;margin:0 auto}
 .ig-card{background:#fff;border:1px solid #dbdbdb;border-radius:16px;overflow:hidden;text-align:left;box-shadow:0 4px 24px rgba(28,20,16,.08)}
 .ig-head{display:flex;align-items:center;gap:10px;padding:12px 14px}
@@ -640,7 +642,10 @@ a{text-decoration:none;color:inherit}
 <div class="wave-sep" style="background:#1c1410"><svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,36 C200,0 440,72 720,36 C1000,0 1240,72 1440,36 L1440,72 L0,72 Z" fill="#f5ede0"/></svg></div>
 
 <section class="ig-section" style="border-top:none">
-  <h2 class="ig-big-h">On Instagram</h2>
+  <div class="ig-big-h">
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    <span>kurucesmekahvesi_kiyimarina</span>
+  </div>
   <div class="ig-wrap">
     <div class="ig-card">
       <div class="ig-head">
