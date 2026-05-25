@@ -266,6 +266,16 @@ a{text-decoration:none;color:inherit}
 .ig-follow{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;border-radius:40px;padding:13px 28px;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:opacity .2s}
 .ig-follow:hover{opacity:.85}
 
+/* ABOUT */
+.about-section{padding:72px 28px;border-top:1px solid var(--border);background:var(--bg2)}
+.about-body{font-size:.86rem;color:var(--muted);line-height:1.88;margin-top:14px;max-width:640px}
+.about-offers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:32px 0 36px;max-width:540px}
+.about-offer{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--dark)}
+.about-offer::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--terra);flex-shrink:0}
+.about-closing{font-size:.86rem;color:var(--muted);line-height:1.88;max-width:640px;margin-top:14px}
+.about-location{margin-top:28px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);font-family:'Inter',sans-serif}
+@media(min-width:768px){.about-section{padding:100px 60px}.about-offers{grid-template-columns:repeat(3,1fr);max-width:720px}}
+
 /* VISIT */
 .visit-section{padding:72px 28px;border-top:1px solid var(--border)}
 .visit-h{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,8vw,4rem);font-weight:400;line-height:1.08;margin-bottom:36px}
@@ -393,6 +403,7 @@ a{text-decoration:none;color:inherit}
   <a href="#about" class="dr" data-tr="DENEYİM" data-en="EXPERIENCE" data-ar="التجربة">DENEYİM</a>
   <a href="https://webmenu.pardonapp.co/kuka-kurucesme-kiyi-marina" target="_blank" rel="noopener" class="dr" data-tr="MENÜ" data-en="MENU" data-ar="القائمة">MENÜ</a>
   <a href="#events" class="dr" data-tr="ETKİNLİKLER" data-en="EVENTS" data-ar="الفعاليات">ETKİNLİKLER</a>
+  <a href="#about-us" class="dr" data-tr="HAKKIMIZDA" data-en="ABOUT US" data-ar="من نحن">HAKKIMIZDA</a>
   <a href="#contact" class="dr" data-tr="ZİYARET" data-en="VISIT" data-ar="زيارة">ZİYARET</a>
   <div class="dr-langs">
     <button class="lang-btn active" data-lang="tr">TR</button>
@@ -754,6 +765,25 @@ a{text-decoration:none;color:inherit}
     </a>
     <button class="ig-arr" id="igNext">&#8250;</button>
   </div>
+</section>
+
+<section class="about-section" id="about-us">
+  <span class="sec-label" data-tr="HAKKIMIZDA" data-en="ABOUT US" data-ar="من نحن">ABOUT US</span>
+  <h2 class="sec-h lg" data-tr="Kuruçeşme Kahvesi<br>Kıyı Marina" data-en="Kuruçeşme Kahvesi<br>Kıyı Marina" data-ar="كافيه كوروتشيشمي<br>كيي مارينا">Kuruçeşme Kahvesi<br>Kıyı Marina</h2>
+  <p class="about-body" data-tr="Kıyı İstanbul Marina'da doğrudan deniz cephesinde, Marmara Denizi'ne bakan konumuyla Kuruçeşme Kahvesi, büyüleyici deniz manzarası ve canlı marina atmosferiyle İstanbul'un en keyifli mekanlarından biri." data-en="Located directly on Kıyı Istanbul Marina with a seafront position overlooking the Marmara Sea, Kuruçeşme Kahvesi is one of Istanbul's most enjoyable destinations with its stunning sea views and vibrant marina atmosphere." data-ar="تقع مباشرة على مارينا كيي إسطنبول بموقع مطل على بحر مرمرة، وتُعدّ كافيه كوروتشيشمي من أكثر الوجهات متعةً في إسطنبول بمناظرها البحرية الخلابة وأجواء المارينا النابضة بالحياة.">Located directly on Kıyı Istanbul Marina with a seafront position overlooking the Marmara Sea, Kuruçeşme Kahvesi is one of Istanbul's most enjoyable destinations with its stunning sea views and vibrant marina atmosphere.</p>
+  <p class="about-body" style="margin-top:16px" data-tr="Orijinal Kuruçeşme şubemizden aynı kalite ve sıcak ruhu Büyükçekmece'ye taşıdık. Misafirlerimize geniş ve konforlu bir ortam sunuyoruz." data-en="We brought the same quality and warm spirit from our original Kuruçeşme branch to Büyükçekmece. We offer our guests a spacious and comfortable environment." data-ar="جلبنا نفس الجودة والروح الدافئة من فرعنا الأصلي في كوروتشيشمي إلى بويوكشكمجة. نوفر لضيوفنا بيئة فسيحة ومريحة.">We brought the same quality and warm spirit from our original Kuruçeşme branch to Büyükçekmece. We offer our guests a spacious and comfortable environment.</p>
+  <div class="about-offers">
+    <div class="about-offer" data-tr="Dünya Mutfağı" data-en="World Cuisine" data-ar="مطبخ عالمي">World Cuisine</div>
+    <div class="about-offer" data-tr="Zengin Kahvaltı Menüsü" data-en="Rich Breakfast Menu" data-ar="قائمة إفطار غنية">Rich Breakfast Menu</div>
+    <div class="about-offer" data-tr="Canlı Maç Yayınları" data-en="Live Match Broadcasts" data-ar="بث المباريات المباشر">Live Match Broadcasts</div>
+    <div class="about-offer" data-tr="Oyun Alanı" data-en="Dedicated Gaming Area" data-ar="منطقة ألعاب مخصصة">Dedicated Gaming Area</div>
+    <div class="about-offer" data-tr="Bar &amp; Kokteyller" data-en="Bar &amp; Cocktails" data-ar="بار وكوكتيلات">Bar &amp; Cocktails</div>
+    <div class="about-offer" data-tr="Nargile — Taze meyve ve klasik aromalar" data-en="Nargile — Fresh fruit &amp; classic flavors" data-ar="نارجيلة — فواكه طازجة ونكهات كلاسيكية">Nargile — Fresh fruit &amp; classic flavors</div>
+  </div>
+  <p class="about-closing" data-tr="Özel kahvelerimiz, imza içeceklerimiz, taze pastanelerimiz ve hafif atıştırmalıklarımızla gün boyu hizmetinizdeyiz. Kapalı ve açık oturma alanlarımız sizi her mevsim konforlu kılar." data-en="With our specialty coffees, signature drinks, fresh pastries and light snacks, we are at your service all day long. Our indoor and outdoor seating areas make you comfortable in every season." data-ar="بقهوتنا المميزة ومشروباتنا الحصرية والمعجنات الطازجة والوجبات الخفيفة، نحن في خدمتكم طوال اليوم. تجعلكم مناطق الجلوس الداخلية والخارجية مرتاحين في كل موسم.">With our specialty coffees, signature drinks, fresh pastries and light snacks, we are at your service all day long. Our indoor and outdoor seating areas make you comfortable in every season.</p>
+  <p class="about-closing" style="margin-top:16px" data-tr="Kahvaltıdan maç izlemeye, kokteyl sohbetlerinden nargile keyfine — marina manzarası, güler yüzlü servis ve hoş atmosferimizle her anınızda yanınızdayız." data-en="From breakfast to watching matches, from cocktail conversations to nargile enjoyment — we accompany every moment with our marina view, friendly service and pleasant atmosphere." data-ar="من الإفطار إلى مشاهدة المباريات، ومن محادثات الكوكتيل إلى الاستمتاع بالنارجيلة — نرافقكم في كل لحظة بإطلالة المارينا وخدمتنا الودية وأجوائنا اللطيفة.">From breakfast to watching matches, from cocktail conversations to nargile enjoyment — we accompany every moment with our marina view, friendly service and pleasant atmosphere.</p>
+  <p class="about-closing" style="margin-top:16px;font-style:italic" data-tr="Sevimli deniz kenarı mekanımıza sizi ağırlamaktan mutluluk duyarız." data-en="We would be delighted to welcome you to our lovely seaside venue." data-ar="يسعدنا استقبالكم في مكاننا الساحلي الجميل.">We would be delighted to welcome you to our lovely seaside venue.</p>
+  <p class="about-location" data-tr="Kıyı İstanbul Marina, Büyükçekmece / İstanbul" data-en="Kıyı Istanbul Marina, Büyükçekmece / Istanbul" data-ar="مارينا كيي إسطنبول، بويوكشكمجة / إسطنبول">Kıyı Istanbul Marina, Büyükçekmece / Istanbul</p>
 </section>
 
 <section class="visit-section" id="contact">
