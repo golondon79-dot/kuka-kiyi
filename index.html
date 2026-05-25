@@ -391,10 +391,14 @@ a{text-decoration:none;color:inherit}
     <video class="hero-video" id="hv2" muted playsinline style="opacity:0">
       <source src="images/hero2.mp4" type="video/mp4">
     </video>
+    <video class="hero-video" id="hv3" muted playsinline style="opacity:0">
+      <source src="images/hero3.mp4" type="video/mp4">
+    </video>
     <div class="hero-grad"></div>
     <div class="hero-dots">
       <span class="hero-dot active" id="hd1"></span>
       <span class="hero-dot" id="hd2"></span>
+      <span class="hero-dot" id="hd3"></span>
     </div>
   </div>
   <div class="hero-content">
@@ -915,19 +919,17 @@ document.body.insertAdjacentHTML('beforeend',`<div id="lb" role="dialog" aria-mo
   },{passive:true});
 })();
 (function(){
-  const v1=document.getElementById('hv1'),v2=document.getElementById('hv2');
-  const d1=document.getElementById('hd1'),d2=document.getElementById('hd2');
-  v2.load();
-  v1.addEventListener('ended',()=>{
-    v1.style.opacity=0;
-    v2.currentTime=0;v2.style.opacity=1;v2.play();
-    d1.classList.remove('active');d2.classList.add('active');
-  });
-  v2.addEventListener('ended',()=>{
-    v2.style.opacity=0;
-    v1.currentTime=0;v1.style.opacity=1;v1.play();
-    d2.classList.remove('active');d1.classList.add('active');
-  });
+  const vids=[document.getElementById('hv1'),document.getElementById('hv2'),document.getElementById('hv3')];
+  const dots=[document.getElementById('hd1'),document.getElementById('hd2'),document.getElementById('hd3')];
+  vids[1].load();vids[2].load();
+  function switchTo(next){
+    const prev=vids.findIndex(v=>v.style.opacity==='1');
+    vids[prev].style.opacity=0;
+    dots[prev].classList.remove('active');
+    vids[next].currentTime=0;vids[next].style.opacity=1;vids[next].play();
+    dots[next].classList.add('active');
+  }
+  vids.forEach((v,i)=>v.addEventListener('ended',()=>switchTo((i+1)%3)));
 })();
 const backTop=document.getElementById('back-top');
 window.addEventListener('scroll',()=>{backTop.classList.toggle('show',window.scrollY>400)},{passive:true});
