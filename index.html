@@ -523,32 +523,32 @@ a{text-decoration:none;color:inherit}
   <span class="cocktail-showcase-label" data-tr="KOKTEYLLERİMİZ" data-en="OUR COCKTAILS" data-ar="كوكتيلاتنا">OUR COCKTAILS</span>
   <h4 class="sec-h lg" data-tr="İmza Kokteyller" data-en="Signature Cocktails" data-ar="كوكتيلات مميزة">Signature Cocktails</h4>
   <div class="cocktail-grid">
-    <div class="cocktail-card fade-in">
+    <div class="cocktail-card">
       <div class="cocktail-glass">🍊</div>
       <h5 class="cocktail-name">Aperol Spritz</h5>
       <p class="cocktail-ing">Aperol · Prosecco · Soda</p>
     </div>
-    <div class="cocktail-card fade-in">
+    <div class="cocktail-card">
       <div class="cocktail-glass">🌿</div>
       <h5 class="cocktail-name">Mojito</h5>
       <p class="cocktail-ing" data-tr="Rom · Taze Nane · Misket Limonu · Soda" data-en="Rum · Fresh Mint · Lime · Soda" data-ar="روم · نعناع طازج · ليمون · صودا">Rum · Fresh Mint · Lime · Soda</p>
     </div>
-    <div class="cocktail-card fade-in">
+    <div class="cocktail-card">
       <div class="cocktail-glass">🍋</div>
       <h5 class="cocktail-name">Margarita</h5>
       <p class="cocktail-ing" data-tr="Tekila · Triple Sec · Taze Limon" data-en="Tequila · Triple Sec · Fresh Lime" data-ar="تكيلا · تريبل سيك · ليمون طازج">Tequila · Triple Sec · Fresh Lime</p>
     </div>
-    <div class="cocktail-card fade-in">
+    <div class="cocktail-card">
       <div class="cocktail-glass">🍷</div>
       <h5 class="cocktail-name">Negroni</h5>
       <p class="cocktail-ing" data-tr="Cin · Campari · Tatlı Vermut" data-en="Gin · Campari · Sweet Vermouth" data-ar="جن · كامباري · فيرموت حلو">Gin · Campari · Sweet Vermouth</p>
     </div>
-    <div class="cocktail-card fade-in">
+    <div class="cocktail-card">
       <div class="cocktail-glass">🍍</div>
       <h5 class="cocktail-name">Piña Colada</h5>
       <p class="cocktail-ing" data-tr="Beyaz Rom · Hindistan Cevizi · Ananas" data-en="White Rum · Coconut Cream · Pineapple" data-ar="روم أبيض · كريمة جوز الهند · أناناس">White Rum · Coconut Cream · Pineapple</p>
     </div>
-    <div class="cocktail-card fade-in">
+    <div class="cocktail-card">
       <div class="cocktail-glass">🍸</div>
       <h5 class="cocktail-name">Cosmopolitan</h5>
       <p class="cocktail-ing" data-tr="Votka · Kızılcık · Triple Sec · Limon" data-en="Vodka · Cranberry · Triple Sec · Lime" data-ar="فودكا · توت بري · تريبل سيك · ليمون">Vodka · Cranberry · Triple Sec · Lime</p>
@@ -963,7 +963,7 @@ const obs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:0.04,rootMargin:'100px'});
-document.querySelectorAll('.feat-block,.dc-event,.ml-item,.info-block,.sec-h,.visit-h,.brand-story,.photo-card,.review-card').forEach(el=>{
+document.querySelectorAll('.feat-block,.dc-event,.ml-item,.info-block,.sec-h,.visit-h,.brand-story,.photo-card,.review-card,.cocktail-card,.cocktail-showcase').forEach(el=>{
   el.classList.add('fade-in');obs.observe(el);
 });
 document.querySelectorAll('.gal-item[data-bg],.photo-card[data-bg],.insta-sq[data-bg],.dc-bg[data-bg]').forEach(el=>obs.observe(el));
