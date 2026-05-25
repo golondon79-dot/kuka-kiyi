@@ -558,8 +558,17 @@ a{text-decoration:none;color:inherit}
       <div class="sport-item">
         <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
           <circle cx="22" cy="22" r="22" fill="#003087"/>
-          <text x="22" y="30" text-anchor="middle" fill="#FFD700" font-size="26" font-family="serif">★</text>
-          <text x="22" y="13" text-anchor="middle" fill="rgba(255,255,255,.75)" font-size="7" font-weight="700" font-family="Arial,sans-serif">UEFA</text>
+          <!-- 8 stars in ring (UEFA Champions League style) -->
+          <text x="22"    y="13"    text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <text x="28.36" y="15.64" text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <text x="31"    y="22"    text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <text x="28.36" y="28.36" text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <text x="22"    y="31"    text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <text x="15.64" y="28.36" text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <text x="13"    y="22"    text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <text x="15.64" y="15.64" text-anchor="middle" dominant-baseline="central" fill="#FFD700" font-size="6.5" font-family="serif">★</text>
+          <!-- Ball hint in center -->
+          <circle cx="22" cy="22" r="4" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.5"/>
         </svg>
         <span class="sport-name" data-tr="UEFA Kupaları" data-en="UEFA Cups" data-ar="كأس يويفا">UEFA Cups</span>
       </div>
@@ -588,8 +597,23 @@ a{text-decoration:none;color:inherit}
       <div class="sport-item">
         <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
           <circle cx="22" cy="22" r="22" fill="#38003c"/>
-          <path d="M13 20 l3-5 3 4 3-6 3 6 3-4 3 5 v5 H13 Z" fill="#00ff85" opacity="0.85"/>
-          <circle cx="22" cy="32" r="4" fill="#00ff85" opacity="0.85"/>
+          <!-- Crown (3 spikes) -->
+          <path d="M15,17 L15,12 L18.5,15 L22,8 L25.5,15 L29,12 L29,17 Z" fill="#00ff85"/>
+          <!-- Mane -->
+          <circle cx="22" cy="21" r="6" fill="#00ff85" opacity="0.45"/>
+          <!-- Head -->
+          <circle cx="22" cy="21" r="4.5" fill="#00ff85"/>
+          <!-- Eye -->
+          <circle cx="23.5" cy="20" r="1" fill="#38003c"/>
+          <!-- Raised front paw -->
+          <path d="M26,20 L31,14 Q33,13 33,15.5 L28,21.5 Z" fill="#00ff85"/>
+          <!-- Body -->
+          <path d="M17.5,25 L16.5,35 L27.5,35 L26.5,25 Z" fill="#00ff85"/>
+          <!-- Tail -->
+          <path d="M27,29 Q34,26 33,19" stroke="#00ff85" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Rear legs -->
+          <path d="M16.5,32 L14,40 L17,40 L18.5,32 Z" fill="#00ff85"/>
+          <path d="M25.5,32 L27,40 L30,40 L28.5,32 Z" fill="#00ff85"/>
         </svg>
         <span class="sport-name" data-tr="Premier Lig" data-en="Premiership" data-ar="الدوري الإنجليزي">Premiership</span>
       </div>
