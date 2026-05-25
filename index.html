@@ -181,6 +181,21 @@ a{text-decoration:none;color:inherit}
 .sports-cta{display:inline-flex;align-items:center;gap:12px;background:var(--terra);color:white;padding:16px 28px;border-radius:40px;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-family:'Inter',sans-serif;text-decoration:none;font-weight:500;transition:opacity .2s}
 .sports-cta:hover{opacity:.88}
 
+/* COCKTAIL SHOWCASE */
+.cocktail-showcase{padding:52px 28px 64px;border-top:1px solid var(--border)}
+.cocktail-showcase-label{display:inline-flex;align-items:center;gap:12px;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:18px}
+.cocktail-showcase-label::before{content:'';width:28px;height:1px;background:var(--terra);flex-shrink:0}
+.cocktail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 36px}
+.cocktail-card{border:1px solid var(--border);border-radius:18px;padding:24px 14px 20px;text-align:center;background:var(--bg);transition:box-shadow .2s}
+.cocktail-card:hover{box-shadow:0 6px 24px rgba(28,20,16,.1)}
+.cocktail-glass{width:48px;height:48px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.4rem;line-height:1}
+.cocktail-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;color:var(--dark);margin-bottom:7px}
+.cocktail-ing{font-size:.66rem;letter-spacing:.04em;color:var(--muted);line-height:1.7}
+.cocktail-cta{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:white;padding:14px 28px;border-radius:40px;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-family:'Inter',sans-serif;text-decoration:none;font-weight:500;transition:opacity .2s}
+.cocktail-cta:hover{opacity:.75}
+@media(min-width:600px){.cocktail-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:768px){.cocktail-showcase{padding:72px 60px}}
+
 /* MENU */
 .menu-section{padding:72px 28px;border-top:1px solid var(--border)}
 .menu-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,10vw,6rem);font-weight:400;line-height:.92;margin-bottom:44px}
@@ -503,6 +518,48 @@ a{text-decoration:none;color:inherit}
   <p class="sec-body" data-tr="Her gün 17:00 – 20:00 arasında özel içecek fırsatları. Akşamın en keyifli saatlerini kıyıda geçirin." data-en="Special drinks offers every day from 5 to 8pm. Spend the best hours of the evening by the water." data-ar="عروض مشروبات خاصة كل يوم من الساعة 5 إلى 8 مساءً. أمضِ أجمل ساعات المساء على الشاطئ.">Her gün 17:00 – 20:00 arasında özel içecek fırsatları. Akşamın en keyifli saatlerini kıyıda geçirin.</p>
   </div>
 </div>
+
+<div class="cocktail-showcase">
+  <span class="cocktail-showcase-label" data-tr="KOKTEYLLERİMİZ" data-en="OUR COCKTAILS" data-ar="كوكتيلاتنا">OUR COCKTAILS</span>
+  <h4 class="sec-h lg" data-tr="İmza Kokteyller" data-en="Signature Cocktails" data-ar="كوكتيلات مميزة">Signature Cocktails</h4>
+  <div class="cocktail-grid">
+    <div class="cocktail-card fade-in">
+      <div class="cocktail-glass">🍊</div>
+      <h5 class="cocktail-name">Aperol Spritz</h5>
+      <p class="cocktail-ing">Aperol · Prosecco · Soda</p>
+    </div>
+    <div class="cocktail-card fade-in">
+      <div class="cocktail-glass">🌿</div>
+      <h5 class="cocktail-name">Mojito</h5>
+      <p class="cocktail-ing" data-tr="Rom · Taze Nane · Misket Limonu · Soda" data-en="Rum · Fresh Mint · Lime · Soda" data-ar="روم · نعناع طازج · ليمون · صودا">Rum · Fresh Mint · Lime · Soda</p>
+    </div>
+    <div class="cocktail-card fade-in">
+      <div class="cocktail-glass">🍋</div>
+      <h5 class="cocktail-name">Margarita</h5>
+      <p class="cocktail-ing" data-tr="Tekila · Triple Sec · Taze Limon" data-en="Tequila · Triple Sec · Fresh Lime" data-ar="تكيلا · تريبل سيك · ليمون طازج">Tequila · Triple Sec · Fresh Lime</p>
+    </div>
+    <div class="cocktail-card fade-in">
+      <div class="cocktail-glass">🍷</div>
+      <h5 class="cocktail-name">Negroni</h5>
+      <p class="cocktail-ing" data-tr="Cin · Campari · Tatlı Vermut" data-en="Gin · Campari · Sweet Vermouth" data-ar="جن · كامباري · فيرموت حلو">Gin · Campari · Sweet Vermouth</p>
+    </div>
+    <div class="cocktail-card fade-in">
+      <div class="cocktail-glass">🍍</div>
+      <h5 class="cocktail-name">Piña Colada</h5>
+      <p class="cocktail-ing" data-tr="Beyaz Rom · Hindistan Cevizi · Ananas" data-en="White Rum · Coconut Cream · Pineapple" data-ar="روم أبيض · كريمة جوز الهند · أناناس">White Rum · Coconut Cream · Pineapple</p>
+    </div>
+    <div class="cocktail-card fade-in">
+      <div class="cocktail-glass">🍸</div>
+      <h5 class="cocktail-name">Cosmopolitan</h5>
+      <p class="cocktail-ing" data-tr="Votka · Kızılcık · Triple Sec · Limon" data-en="Vodka · Cranberry · Triple Sec · Lime" data-ar="فودكا · توت بري · تريبل سيك · ليمون">Vodka · Cranberry · Triple Sec · Lime</p>
+    </div>
+  </div>
+  <a href="https://wa.me/905385044555?text=Kokteyl+men%C3%BCs%C3%BC+hakk%C4%B1nda+bilgi+almak+istiyorum" class="cocktail-cta" target="_blank" rel="noopener">
+    <span data-tr="TAM MENÜYÜ GÖR" data-en="SEE FULL MENU" data-ar="عرض القائمة الكاملة">SEE FULL MENU</span>
+    <span>→</span>
+  </a>
+</div>
+
   <p class="stmt-quote" data-tr="Premium nargile, dünya mutfağı ve Marmara esintisinde deniz kenarı keyfi, sabahtan geceye. KuKa'nın dördüncü şubesi — sadece burada." data-en="Premium shisha, world cuisine and seaside indulgence from morning to night, carried on the Marmara breeze. KuKa's fourth branch — only here." data-ar="شيشة بريميوم ومطبخ عالمي ومتعة بجانب البحر من الصباح حتى المساء. الفرع الرابع لـ KuKa — هنا فقط.">Premium shisha, world cuisine and seaside indulgence from morning to night, carried on the Marmara breeze. KuKa's fourth branch — only here.</p>
 </section>
 
