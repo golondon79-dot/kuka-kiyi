@@ -176,7 +176,7 @@ a{text-decoration:none;color:inherit}
 .dc-ev-sub{font-size:.76rem;color:rgba(255,255,255,.42)}
 .sports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:32px}
 .sport-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
-.sport-svg{width:44px;height:44px;flex-shrink:0}
+.sport-svg,.sport-logo{width:44px;height:44px;flex-shrink:0;object-fit:contain}
 .sport-name{font-size:.5rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.78);font-family:'Inter',sans-serif;line-height:1.4}
 .sports-cta{display:inline-flex;align-items:center;gap:12px;background:var(--terra);color:white;padding:16px 28px;border-radius:40px;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-family:'Inter',sans-serif;text-decoration:none;font-weight:500;transition:opacity .2s}
 .sports-cta:hover{opacity:.88}
@@ -556,70 +556,17 @@ a{text-decoration:none;color:inherit}
     <div class="sports-grid">
 
       <div class="sport-item">
-        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-          <rect width="44" height="44" rx="5" fill="#003DA5"/>
-          <!-- Outer 8 stars (radius 8, center 22,15) -->
-          <text x="22"    y="7"     text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <text x="27.66" y="9.34"  text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <text x="30"    y="15"    text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <text x="27.66" y="20.66" text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <text x="22"    y="23"    text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <text x="16.34" y="20.66" text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <text x="14"    y="15"    text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <text x="16.34" y="9.34"  text-anchor="middle" dominant-baseline="central" fill="white" font-size="6" font-family="serif">★</text>
-          <!-- Inner 6 stars (radius 3.5) -->
-          <text x="22"    y="11.5"  text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.5" font-family="serif">★</text>
-          <text x="25.03" y="13.25" text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.5" font-family="serif">★</text>
-          <text x="25.03" y="16.75" text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.5" font-family="serif">★</text>
-          <text x="22"    y="18.5"  text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.5" font-family="serif">★</text>
-          <text x="18.97" y="16.75" text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.5" font-family="serif">★</text>
-          <text x="18.97" y="13.25" text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.5" font-family="serif">★</text>
-          <!-- UEFA text -->
-          <text x="22" y="29" text-anchor="middle" dominant-baseline="central" fill="white" font-size="5" font-weight="700" font-family="Arial,sans-serif" letter-spacing="1">UEFA</text>
-          <!-- CHAMPIONS LEAGUE text -->
-          <text x="22" y="35" text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.2" font-weight="700" font-family="Arial,sans-serif" letter-spacing="0.3">CHAMPIONS</text>
-          <text x="22" y="40" text-anchor="middle" dominant-baseline="central" fill="white" font-size="3.2" font-weight="700" font-family="Arial,sans-serif" letter-spacing="0.3">LEAGUE</text>
-        </svg>
+        <img class="sport-logo" src="images/logo-ucl.jpg" alt="UEFA Cups">
         <span class="sport-name" data-tr="UEFA Kupaları" data-en="UEFA Cups" data-ar="كأس يويفا">UEFA Cups</span>
       </div>
 
       <div class="sport-item">
-        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-          <rect width="44" height="44" rx="5" fill="white"/>
-          <!-- "26" numbers in background -->
-          <text x="5"  y="22" text-anchor="middle" dominant-baseline="central" fill="#111" font-size="30" font-weight="900" font-family="Arial,sans-serif">2</text>
-          <text x="39" y="22" text-anchor="middle" dominant-baseline="central" fill="#111" font-size="30" font-weight="900" font-family="Arial,sans-serif">6</text>
-          <!-- Trophy globe -->
-          <circle cx="22" cy="10" r="5.5" fill="#B8860B"/>
-          <!-- Trophy arms -->
-          <path d="M16.5,14.5 Q11,17 12.5,21 L17.5,19 L22,20 L26.5,19 L31.5,21 Q33,17 27.5,14.5 Z" fill="#B8860B"/>
-          <!-- Stem -->
-          <rect x="20" y="19.5" width="4" height="6.5" fill="#B8860B"/>
-          <!-- Neck -->
-          <path d="M17.5,26 L15.5,29 L28.5,29 L26.5,26 Z" fill="#B8860B"/>
-          <!-- Green band -->
-          <rect x="13.5" y="29" width="17" height="2" rx="0.5" fill="#1a6b3c"/>
-          <!-- Base -->
-          <rect x="12" y="31" width="20" height="2.5" rx="1" fill="#B8860B"/>
-          <!-- FIFA text -->
-          <text x="22" y="38.5" text-anchor="middle" dominant-baseline="central" fill="#111" font-size="8" font-weight="900" font-family="Arial,sans-serif">FIFA</text>
-          <text x="22" y="43"   text-anchor="middle" dominant-baseline="central" fill="#111" font-size="3.2" font-weight="700" font-family="Arial,sans-serif" letter-spacing="0.4">WORLD CUP</text>
-        </svg>
+        <img class="sport-logo" src="images/logo-fifa-wc.jpg" alt="FIFA World Cup">
         <span class="sport-name" data-tr="FIFA Dünya Kupası" data-en="FIFA World Cup" data-ar="كأس العالم">FIFA World Cup</span>
       </div>
 
       <div class="sport-item">
-        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-          <rect width="44" height="44" rx="5" fill="white"/>
-          <!-- Red star above cup -->
-          <text x="22" y="5" text-anchor="middle" dominant-baseline="central" fill="#D0002A" font-size="7" font-family="serif">★</text>
-          <!-- Left arm of cup -->
-          <path d="M 13,9 C 7,14 5,22 22,32" stroke="#9a9a9a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- Right arm of cup -->
-          <path d="M 31,9 C 37,14 39,22 22,32" stroke="#9a9a9a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- SüperLig text -->
-          <text x="22" y="40" text-anchor="middle" dominant-baseline="central" fill="#1a1a1a" font-size="6" font-weight="700" font-family="Georgia,serif">SüperLig</text>
-        </svg>
+        <img class="sport-logo" src="images/logo-super-lig.png" alt="Turkish Super League">
         <span class="sport-name" data-tr="Süper Lig" data-en="Turkish Super League" data-ar="الدوري التركي">Turkish Super League</span>
       </div>
 
