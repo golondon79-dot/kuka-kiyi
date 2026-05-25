@@ -174,6 +174,12 @@ a{text-decoration:none;color:inherit}
 .dc-ev-btn:hover{background:rgba(255,255,255,.1)}
 .dc-ev-h{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:5px}
 .dc-ev-sub{font-size:.76rem;color:rgba(255,255,255,.42)}
+.sports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:32px}
+.sport-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.sport-svg{width:44px;height:44px;flex-shrink:0}
+.sport-name{font-size:.5rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.78);font-family:'Inter',sans-serif;line-height:1.4}
+.sports-cta{display:inline-flex;align-items:center;gap:12px;background:var(--terra);color:white;padding:16px 28px;border-radius:40px;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-family:'Inter',sans-serif;text-decoration:none;font-weight:500;transition:opacity .2s}
+.sports-cta:hover{opacity:.88}
 
 /* MENU */
 .menu-section{padding:72px 28px;border-top:1px solid var(--border)}
@@ -546,24 +552,99 @@ a{text-decoration:none;color:inherit}
   <div class="dc-content">
     <span class="dc-label" data-tr="MAÇ GECELERİ" data-en="MATCH NIGHTS" data-ar="ليالي المباريات">MAÇ GECELERİ</span>
     <h2 class="dc-h" data-tr="Stadyum enerjisi,<br>deniz esintisiyle." data-en="Stadium energy,<br>by the sea breeze." data-ar="طاقة الملعب،<br>مع نسيم البحر.">Stadyum enerjisi,<br>deniz esintisiyle.</h2>
-    <p class="dc-body" data-tr="Dev ekranda çok kanallı sesle Süper Lig, UEFA ve milli maçlar. Derby geceleri için önceden rezervasyon önerilir." data-en="Süper Lig, UEFA and national matches on a giant screen with multi-channel sound. We recommend reserving ahead for derby nights." data-ar="مباريات الدوري التركي واليويفا والمباريات الوطنية على شاشة عملاقة. يُنصح بالحجز المسبق لليالي الديربي.">Dev ekranda çok kanallı sesle Süper Lig, UEFA ve milli maçlar. Derby geceleri için önceden rezervasyon önerilir.</p>
-    <div class="dc-events">
-      <div class="dc-event">
-        <div class="dc-ev-top">
-          <span class="dc-ev-day" data-tr="CUMARTESİ · 20:00" data-en="SATURDAY · 20:00" data-ar="السبت · 20:00">CUMARTESİ · 20:00</span>
-          <button class="dc-ev-btn" onclick="window.open('https://wa.me/905385044555?text=Ma%C3%A7+gecesi+rezervasyon','_blank')" data-tr="MASA AYIRT" data-en="RESERVE A TABLE" data-ar="احجز طاولة">MASA AYIRT</button>
-        </div>
-        <p class="dc-ev-h" data-tr="Derby Gecesi" data-en="Derby Night" data-ar="ليلة الديربي">Derby Gecesi</p>
-        <p class="dc-ev-sub" data-tr="Marina Terası · Canlı yayın" data-en="Marina Terrace · Live broadcast" data-ar="تراس المارينا · بث مباشر">Marina Terası · Canlı yayın</p>
+    <p class="dc-body" data-tr="Dev ekranda tüm büyük organizasyonları canlı izleyin." data-en="Watch all major competitions live on our giant screen." data-ar="شاهد جميع البطولات الكبرى مباشرة على شاشتنا العملاقة.">Watch all major competitions live on our giant screen.</p>
+    <div class="sports-grid">
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#003087"/>
+          <text x="22" y="30" text-anchor="middle" fill="#FFD700" font-size="26" font-family="serif">★</text>
+          <text x="22" y="13" text-anchor="middle" fill="rgba(255,255,255,.75)" font-size="7" font-weight="700" font-family="Arial,sans-serif">UEFA</text>
+        </svg>
+        <span class="sport-name" data-tr="UEFA Kupaları" data-en="UEFA Cups" data-ar="كأس يويفا">UEFA Cups</span>
       </div>
-      <div class="dc-event">
-        <div class="dc-ev-top">
-          <span class="dc-ev-day" data-tr="ÇARŞAMBA · 22:00" data-en="WEDNESDAY · 22:00" data-ar="الأربعاء · 22:00">ÇARŞAMBA · 22:00</span>
-        </div>
-        <p class="dc-ev-h" data-tr="UEFA Şampiyonlar Ligi" data-en="UEFA Champions League" data-ar="دوري أبطال أوروبا">UEFA Şampiyonlar Ligi</p>
-        <p class="dc-ev-sub" data-tr="Kapalı lounge ve teras yayını" data-en="Indoor lounge &amp; terrace screening" data-ar="لاونج داخلي وعرض على التراس">Kapalı lounge ve teras yayını</p>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#1565C0"/>
+          <circle cx="22" cy="22" r="12" stroke="white" stroke-width="1.5" fill="none"/>
+          <ellipse cx="22" cy="22" rx="6.5" ry="12" stroke="white" stroke-width="1.5" fill="none"/>
+          <path d="M10.5 17 Q22 20.5 33.5 17" stroke="white" stroke-width="1" fill="none"/>
+          <path d="M10.5 27 Q22 23.5 33.5 27" stroke="white" stroke-width="1" fill="none"/>
+        </svg>
+        <span class="sport-name" data-tr="FIFA Kupaları" data-en="FIFA Cups" data-ar="كأس فيفا">FIFA Cups</span>
       </div>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#E30A17"/>
+          <circle cx="20" cy="22" r="9" fill="white"/>
+          <circle cx="24" cy="22" r="7.5" fill="#E30A17"/>
+          <text x="32" y="27" text-anchor="middle" fill="white" font-size="10" font-family="serif">★</text>
+        </svg>
+        <span class="sport-name" data-tr="Süper Lig" data-en="Turkish Super League" data-ar="الدوري التركي">Turkish Super League</span>
+      </div>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#38003c"/>
+          <path d="M13 20 l3-5 3 4 3-6 3 6 3-4 3 5 v5 H13 Z" fill="#00ff85" opacity="0.85"/>
+          <circle cx="22" cy="32" r="4" fill="#00ff85" opacity="0.85"/>
+        </svg>
+        <span class="sport-name" data-tr="Premier Lig" data-en="Premiership" data-ar="الدوري الإنجليزي">Premiership</span>
+      </div>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#FF4B00"/>
+          <text x="22" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="900" font-family="Arial,sans-serif">LaLiga</text>
+        </svg>
+        <span class="sport-name" data-tr="La Liga" data-en="La Liga" data-ar="الدوري الإسباني">La Liga</span>
+      </div>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#006C35"/>
+          <text x="22" y="19" text-anchor="middle" fill="#FFD700" font-size="7.5" font-weight="700" font-family="Arial,sans-serif">SAUDI</text>
+          <text x="22" y="29" text-anchor="middle" fill="#FFD700" font-size="7.5" font-weight="700" font-family="Arial,sans-serif">PRO LEAGUE</text>
+        </svg>
+        <span class="sport-name" data-tr="Suudi Pro Ligi" data-en="Saudi Pro League" data-ar="دوري روشن">Saudi Pro League</span>
+      </div>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#0a0a14"/>
+          <path d="M22 9 L32 13.5 L32 24 Q32 33 22 37 Q12 33 12 24 L12 13.5 Z" fill="none" stroke="#C6A84B" stroke-width="1.5"/>
+          <text x="22" y="29" text-anchor="middle" fill="#C6A84B" font-size="13" font-weight="700" font-family="Arial,sans-serif">A</text>
+          <text x="22" y="18" text-anchor="middle" fill="#C6A84B" font-size="8" font-family="serif">★</text>
+        </svg>
+        <span class="sport-name" data-tr="Serie A" data-en="Serie A" data-ar="الدوري الإيطالي">Serie A</span>
+      </div>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="7" fill="#E10600"/>
+          <text x="22" y="30" text-anchor="middle" fill="white" font-size="22" font-weight="900" font-family="Arial,sans-serif">F1</text>
+        </svg>
+        <span class="sport-name" data-tr="Formula 1" data-en="F1" data-ar="فورمولا 1">F1</span>
+      </div>
+
+      <div class="sport-item">
+        <svg class="sport-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#0a0a14"/>
+          <circle cx="22" cy="22" r="11" stroke="#FF6B35" stroke-width="2" fill="rgba(255,107,53,.12)"/>
+          <path d="M11 22 Q22 28.5 33 22" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+          <path d="M11 22 Q22 15.5 33 22" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+          <line x1="22" y1="11" x2="22" y2="33" stroke="#FF6B35" stroke-width="1.5"/>
+        </svg>
+        <span class="sport-name" data-tr="EuroLeague" data-en="Euroleague" data-ar="يوروليغ">Euroleague</span>
+      </div>
+
     </div>
+    <a href="https://wa.me/905385044555?text=Canl%C4%B1+yay%C4%B1n+rezervasyonu" class="sports-cta" target="_blank" rel="noopener">
+      <span data-tr="CANLI YAYIN İÇİN REZERVASYON" data-en="ASK FOR LIVE BROADCAST" data-ar="احجز للبث المباشر">ASK FOR LIVE BROADCAST</span>
+      <span>+</span>
+    </a>
   </div>
 </div>
 
