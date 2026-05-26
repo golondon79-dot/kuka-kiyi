@@ -6,6 +6,8 @@
   <meta name="description" content="KuKa Kıyı Marina — Büyükçekmece'nin kıyısında premium nargile, dünya mutfağı, PS5 oyun odası ve özel etkinlikler.">
   <title>KuKa Kıyı Marina | Büyükçekmece</title>
 
+  <link rel="canonical" href="https://golondon79-dot.github.io/kuka-kiyi/">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo-dark.png">
   <link rel="apple-touch-icon" href="images/logo-dark.png">
@@ -199,22 +201,6 @@ a{text-decoration:none;color:inherit}
 
 /* MENU */
 .menu-section{padding:72px 28px;border-top:1px solid var(--border)}
-.menu-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,10vw,6rem);font-weight:400;line-height:.92;margin-bottom:44px}
-.tab-row{display:flex;gap:0;margin-bottom:40px;border-bottom:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch}
-.tab{background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;font-family:'Inter',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.16em;color:var(--muted);padding:10px 20px 10px 0;text-transform:uppercase;white-space:nowrap;transition:.2s}
-.tab:hover{color:var(--dark)}.tab.active{color:var(--terra);border-bottom-color:var(--terra)}
-.tab-panel{display:none}.tab-panel.active{display:block}
-.ml{display:flex;flex-direction:column}
-.ml-item{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--border)}
-.ml-n{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:400;flex-shrink:0}
-.ml-line{flex:1;border-bottom:1px dashed var(--border);margin-bottom:4px}
-.ml-d{font-size:.72rem;color:var(--muted);flex-shrink:0}
-.nar-intro{font-size:.82rem;color:var(--muted);margin-bottom:28px;line-height:1.78;text-transform:uppercase;letter-spacing:.06em}
-.nar-grid{display:flex;flex-wrap:wrap;gap:8px}
-.ng-pill{padding:10px 20px;border:1.5px solid var(--border);border-radius:40px;font-size:.66rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:default;transition:.2s}
-.ng-pill:hover{border-color:var(--terra);color:var(--terra)}
-.ng-special{border-color:var(--terra);color:var(--terra)}
-.menu-cta{margin-top:44px;text-align:center}
 
 /* SPECIAL OCCASIONS */
 .occasions{padding:72px 28px;border-top:1px solid var(--border);background:var(--dark);color:var(--white)}
@@ -359,7 +345,6 @@ a{text-decoration:none;color:inherit}
     padding-right:max(60px,calc((100vw - 1200px)/2));
   }
 }
-[dir="rtl"] .ml-item{flex-direction:row-reverse}
 /* Lightbox */
 #lb{position:fixed;inset:0;z-index:2000;background:rgba(20,12,8,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
 #lb.open{opacity:1;pointer-events:auto}
@@ -538,7 +523,7 @@ a{text-decoration:none;color:inherit}
     <div class="cocktail-card" data-bg="url('images/cocktail-aperol.jpg')">
       <div class="cocktail-info">
         <h5 class="cocktail-name">Aperol Spritz</h5>
-        <p class="cocktail-ing">Aperol · Prosecco · Soda</p>
+        <p class="cocktail-ing" data-tr="Aperol · Prosecco · Soda" data-en="Aperol · Prosecco · Soda" data-ar="أبيرول · بروسيكو · صودا">Aperol · Prosecco · Soda</p>
       </div>
     </div>
     <div class="cocktail-card" data-bg="url('images/cocktail-mojito.jpg')">
@@ -578,6 +563,9 @@ a{text-decoration:none;color:inherit}
   </a>
 </div>
 
+</section>
+
+<section class="statement-block">
   <p class="stmt-quote" data-tr="Premium nargile, dünya mutfağı ve Marmara esintisinde deniz kenarı keyfi, sabahtan geceye. KuKa'nın dördüncü şubesi — sadece burada." data-en="Premium shisha, world cuisine and seaside indulgence from morning to night, carried on the Marmara breeze. KuKa's fourth branch — only here." data-ar="شيشة بريميوم ومطبخ عالمي ومتعة بجانب البحر من الصباح حتى المساء. الفرع الرابع لـ KuKa — هنا فقط.">Premium shisha, world cuisine and seaside indulgence from morning to night, carried on the Marmara breeze. KuKa's fourth branch — only here.</p>
 </section>
 
@@ -647,7 +635,7 @@ a{text-decoration:none;color:inherit}
 
       <div class="sport-item">
         <img class="sport-logo" src="images/logo-premier-league.png" alt="Premier League">
-        <span class="sport-name" data-tr="Premier Lig" data-en="Premiership" data-ar="الدوري الإنجليزي">Premiership</span>
+        <span class="sport-name" data-tr="Premier Lig" data-en="Premier League" data-ar="الدوري الإنجليزي الممتاز">Premier League</span>
       </div>
 
       <div class="sport-item">
@@ -948,7 +936,7 @@ const obs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:0.04,rootMargin:'100px'});
-document.querySelectorAll('.feat-block,.dc-event,.ml-item,.info-block,.sec-h,.visit-h,.brand-story,.photo-card,.review-card,.cocktail-card,.cocktail-showcase').forEach(el=>{
+document.querySelectorAll('.feat-block,.dc-event,.info-block,.sec-h,.visit-h,.brand-story,.photo-card,.review-card,.cocktail-card,.cocktail-showcase,.statement-block').forEach(el=>{
   el.classList.add('fade-in');obs.observe(el);
 });
 document.querySelectorAll('.gal-item[data-bg],.photo-card[data-bg],.insta-sq[data-bg],.dc-bg[data-bg]').forEach(el=>obs.observe(el));
