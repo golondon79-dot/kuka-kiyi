@@ -156,8 +156,6 @@ a{text-decoration:none;color:inherit}
 }
 
 /* STATEMENT BLOCK */
-.statement-block{padding:52px 28px 72px;border-top:1px solid var(--border);background:var(--bg2)}
-.stmt-quote{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,4vw,1.9rem);font-weight:400;line-height:1.55;color:var(--dark);border-left:2px solid var(--terra);padding-left:24px}
 
 /* DARK CARD */
 .dark-card{margin:0 14px 0;border-radius:28px;overflow:hidden;position:relative}
@@ -565,9 +563,6 @@ a{text-decoration:none;color:inherit}
 
 </section>
 
-<section class="statement-block">
-  <p class="stmt-quote" data-tr="Premium nargile, dünya mutfağı ve Marmara esintisinde deniz kenarı keyfi, sabahtan geceye. KuKa'nın dördüncü şubesi — sadece burada." data-en="Premium shisha, world cuisine and seaside indulgence from morning to night, carried on the Marmara breeze. KuKa's fourth branch — only here." data-ar="شيشة بريميوم ومطبخ عالمي ومتعة بجانب البحر من الصباح حتى المساء. الفرع الرابع لـ KuKa — هنا فقط.">Premium shisha, world cuisine and seaside indulgence from morning to night, carried on the Marmara breeze. KuKa's fourth branch — only here.</p>
-</section>
 
 <div class="feat-block alt">
   <div class="photo-card" data-bg="url('images/photo-fireplace.jpg')"></div>
@@ -936,7 +931,7 @@ const obs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:0.04,rootMargin:'100px'});
-document.querySelectorAll('.feat-block,.dc-event,.info-block,.sec-h,.visit-h,.brand-story,.photo-card,.review-card,.cocktail-card,.cocktail-showcase,.statement-block').forEach(el=>{
+document.querySelectorAll('.feat-block,.dc-event,.info-block,.sec-h,.visit-h,.brand-story,.photo-card,.review-card,.cocktail-card,.cocktail-showcase').forEach(el=>{
   el.classList.add('fade-in');obs.observe(el);
 });
 document.querySelectorAll('.gal-item[data-bg],.photo-card[data-bg],.insta-sq[data-bg],.dc-bg[data-bg]').forEach(el=>obs.observe(el));
