@@ -399,8 +399,9 @@ a{text-decoration:none;color:inherit}
 
 <section class="hero" id="top">
   <div class="hero-media">
-    <div class="hero-yt-wrap" id="hyw1"><div id="hyt1"></div></div>
+    <div class="hero-yt-wrap" id="hyw1" style="opacity:0"><div id="hyt1"></div></div>
     <div class="hero-yt-wrap" id="hyw2" style="opacity:0"><div id="hyt2"></div></div>
+    <div class="hero-yt-wrap" id="hyw3" style="opacity:0"><div id="hyt3"></div></div>
     <div class="hero-grad"></div>
   </div>
   <div class="hero-content">
@@ -982,19 +983,28 @@ backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}))
 
 (function(){
   var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);
-  var p=[null,null],cur=0;
-  var w=[document.getElementById('hyw1'),document.getElementById('hyw2')];
-  var ids=['-tiof3jxqmo','FNCCN7xLrVI'];
+  var isDesktop=window.matchMedia('(min-width:768px)').matches;
+  var w=[document.getElementById('hyw1'),document.getElementById('hyw2'),document.getElementById('hyw3')];
+  var ids=['-tiof3jxqmo','nVBcoTWJ6AU','FNCCN7xLrVI'];
+  var active=isDesktop?[1,2]:[0,1,2];
+  var p=[null,null,null],cur=0;
   window.onYouTubeIframeAPIReady=function(){
-    p[0]=new YT.Player('hyt1',{videoId:ids[0],playerVars:{autoplay:1,mute:1,controls:0,loop:0,playsinline:1,rel:0,modestbranding:1},events:{onStateChange:chk}});
-    p[1]=new YT.Player('hyt2',{videoId:ids[1],playerVars:{autoplay:0,mute:1,controls:0,loop:0,playsinline:1,rel:0,modestbranding:1},events:{onStateChange:chk}});
+    w[active[0]].style.opacity=1;
+    active.forEach(function(idx,i){
+      p[idx]=new YT.Player('hyt'+(idx+1),{
+        videoId:ids[idx],
+        playerVars:{autoplay:i===0?1:0,mute:1,controls:0,loop:0,playsinline:1,rel:0,modestbranding:1},
+        events:{onStateChange:chk}
+      });
+    });
   };
   function chk(e){if(e.data===YT.PlayerState.ENDED)next();}
   function next(){
-    var n=(cur+1)%2;
-    w[cur].style.opacity=0;w[n].style.opacity=1;
-    p[n].seekTo(0);p[n].playVideo();
-    cur=n;
+    var prevIdx=active[cur];
+    cur=(cur+1)%active.length;
+    var nextIdx=active[cur];
+    w[prevIdx].style.opacity=0;w[nextIdx].style.opacity=1;
+    p[nextIdx].seekTo(0);p[nextIdx].playVideo();
   }
 })();
 </script>
