@@ -103,14 +103,11 @@ a{text-decoration:none;color:inherit}
 /* HERO */
 .hero{padding-top:var(--nav-h)}
 .hero-media{position:relative;height:calc(85vh - var(--nav-h));min-height:420px;overflow:hidden}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-yt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:calc(100vw * 16 / 9);min-height:100%;border:none;pointer-events:none}
 .hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(245,237,224,0) 0%,rgba(245,237,224,0) 88%,rgba(245,237,224,1) 100%)}
 .hero-content{padding:36px 28px 52px;display:flex;flex-direction:column;gap:20px;background:var(--bg)}
 .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,10vw,5.5rem);font-weight:400;line-height:1.06;color:var(--dark)}
 .hero-h1 em{font-style:italic;color:var(--terra);font-weight:400}
-.hero-dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
-.hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);transition:background .4s,transform .4s;cursor:default}
-.hero-dot.active{background:#fff;transform:scale(1.3)}
 .hero-label{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);display:inline-flex;align-items:center;gap:12px}
 .hero-label::before{content:'';width:28px;height:1px;background:var(--terra);flex-shrink:0}
 .hero-body{font-size:.86rem;color:var(--dark);line-height:1.78;max-width:440px;opacity:.85}
@@ -401,21 +398,8 @@ a{text-decoration:none;color:inherit}
 
 <section class="hero" id="top">
   <div class="hero-media">
-    <video class="hero-video" id="hv1" autoplay muted playsinline poster="images/photo-exterior.jpg" style="opacity:1">
-      <source src="images/hero.mp4" type="video/mp4">
-    </video>
-    <video class="hero-video" id="hv2" muted playsinline style="opacity:0">
-      <source src="images/hero2.mp4" type="video/mp4">
-    </video>
-    <video class="hero-video" id="hv3" muted playsinline style="opacity:0">
-      <source src="images/hero3.mp4" type="video/mp4">
-    </video>
+    <iframe class="hero-yt" src="https://www.youtube-nocookie.com/embed/3Jqc8uPDX8Q?autoplay=1&mute=1&loop=1&controls=0&playsinline=1&rel=0&modestbranding=1&playlist=3Jqc8uPDX8Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div class="hero-grad"></div>
-    <div class="hero-dots">
-      <span class="hero-dot active" id="hd1"></span>
-      <span class="hero-dot" id="hd2"></span>
-      <span class="hero-dot" id="hd3"></span>
-    </div>
   </div>
   <div class="hero-content">
     <span class="hero-label" data-tr="BÜYÜKÇEKMECE · KIYI İSTANBUL MARİNA" data-en="BÜYÜKÇEKMECE · KIYI ISTANBUL MARINA" data-ar="بيوك تشكمجة · مارينا إسطنبول">BÜYÜKÇEKMECE · KIYI İSTANBUL MARİNA</span>
@@ -989,19 +973,6 @@ document.body.insertAdjacentHTML('beforeend',`<div id="lb" role="dialog" aria-mo
     const dx=e.changedTouches[0].clientX-touchX;
     if(Math.abs(dx)>40){dx<0?next():prev();}
   },{passive:true});
-})();
-(function(){
-  const vids=[document.getElementById('hv1'),document.getElementById('hv2'),document.getElementById('hv3')];
-  const dots=[document.getElementById('hd1'),document.getElementById('hd2'),document.getElementById('hd3')];
-  vids[1].load();vids[2].load();
-  function switchTo(next){
-    const prev=vids.findIndex(v=>v.style.opacity==='1');
-    vids[prev].style.opacity=0;
-    dots[prev].classList.remove('active');
-    vids[next].currentTime=0;vids[next].style.opacity=1;vids[next].play();
-    dots[next].classList.add('active');
-  }
-  vids.forEach((v,i)=>v.addEventListener('ended',()=>switchTo((i+1)%3)));
 })();
 const backTop=document.getElementById('back-top');
 window.addEventListener('scroll',()=>{backTop.classList.toggle('show',window.scrollY>400)},{passive:true});
