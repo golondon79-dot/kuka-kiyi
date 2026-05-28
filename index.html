@@ -985,15 +985,9 @@ backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}))
   var p=[null,null],cur=0;
   var w=[document.getElementById('hyw1'),document.getElementById('hyw2')];
   var ids=['-tiof3jxqmo','FNCCN7xLrVI'];
-  var isDesktop=window.matchMedia('(min-width:768px)').matches;
   window.onYouTubeIframeAPIReady=function(){
-    if(isDesktop){
-      w[0].style.opacity=0;w[1].style.opacity=1;
-      p[1]=new YT.Player('hyt2',{videoId:ids[1],playerVars:{autoplay:1,mute:1,controls:0,loop:1,playsinline:1,rel:0,modestbranding:1,playlist:ids[1]}});
-    } else {
-      p[0]=new YT.Player('hyt1',{videoId:ids[0],playerVars:{autoplay:1,mute:1,controls:0,loop:0,playsinline:1,rel:0,modestbranding:1},events:{onStateChange:chk}});
-      p[1]=new YT.Player('hyt2',{videoId:ids[1],playerVars:{autoplay:0,mute:1,controls:0,loop:0,playsinline:1,rel:0,modestbranding:1},events:{onStateChange:chk}});
-    }
+    p[0]=new YT.Player('hyt1',{videoId:ids[0],playerVars:{autoplay:1,mute:1,controls:0,loop:0,playsinline:1,rel:0,modestbranding:1},events:{onStateChange:chk}});
+    p[1]=new YT.Player('hyt2',{videoId:ids[1],playerVars:{autoplay:0,mute:1,controls:0,loop:0,playsinline:1,rel:0,modestbranding:1},events:{onStateChange:chk}});
   };
   function chk(e){if(e.data===YT.PlayerState.ENDED)next();}
   function next(){
