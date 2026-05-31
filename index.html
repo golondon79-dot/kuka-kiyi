@@ -855,7 +855,7 @@ function applyLang(lang){
 }
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
 const saved=localStorage.getItem('kuka-lang');
-if(saved&&LANGS[saved])applyLang(saved);
+if(saved&&LANGS[saved])applyLang(saved);else applyLang('tr');
 
 const burger=document.getElementById('burger');
 const drawer=document.getElementById('drawer');
