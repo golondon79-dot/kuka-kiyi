@@ -1010,7 +1010,7 @@ backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}))
   var isDesktop=window.matchMedia('(min-width:768px)').matches;
   var w=[document.getElementById('hyw1'),document.getElementById('hyw2'),document.getElementById('hyw3')];
   var ids=['-tiof3jxqmo','nVBcoTWJ6AU','FNCCN7xLrVI'];
-  var active=isDesktop?[1,2]:[0,1,2];
+  var active=[1,2];
   var p=[null,null,null],cur=0;
   window.onYouTubeIframeAPIReady=function(){
     w[active[0]].style.opacity=1;
