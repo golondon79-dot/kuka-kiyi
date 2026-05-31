@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["claude/website-requirements-planning-NZhiA"]
+    branches: ["claude/website-requirements-planning-NZhiA", "claude/continue-website-build-hiekQ"]
   workflow_dispatch:
 
 permissions:
